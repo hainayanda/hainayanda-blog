@@ -1,0 +1,83 @@
+div.home-container{
+    background-image: url("https://res.cloudinary.com/hainayanda/image/upload/v1547408609/home-bg.jpg");
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+div.home-row{
+    padding: 180px 0 180px;
+    margin: auto;
+}
+
+div.home-content-container{
+    width: 900px;
+    margin: auto;
+}
+
+h1.home{
+    color: #ffffff;
+    line-height: 95%;
+}
+
+h1.home-bold{
+    font-size: 63px;
+    font-weight: 900
+}
+
+h1.home-semi-bold{
+    font-size: 63px;
+    font-weight: 400;
+}
+
+p.home-p{
+    font-size: 21px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 45px 0 18px;
+}
+
+i.button-r-arrow{
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+a.button{
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 9px;
+    margin-right: 18px;
+    margin-top: 18px;
+    display: inline-block;
+}
+
+a.button:hover{
+    opacity: 0.7;
+}
+
+a.button-about{
+    background-color: #25c6d8;
+}
+
+a.button-contact{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 900px) {
+    div.home-row{
+        padding: 180px 0 180px;
+        margin: auto;
+    }
+    
+    div.home-content-container{
+        margin-left: 90px;
+        margin-right: 90px;
+        width: 80%;
+    }
+}

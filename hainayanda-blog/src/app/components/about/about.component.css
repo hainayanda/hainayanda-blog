@@ -1,0 +1,60 @@
+div.about-header {
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 768px;
+    max-height: 900px;
+}
+
+div.about-header-bg{
+    z-index: -1;
+    background-image: url("https://res.cloudinary.com/hainayanda/image/upload/v1547404396/home.jpg");
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 768px;
+    max-height: 900px;
+}
+
+div.about-row{
+    padding-left: 50%;
+    padding-right: 90px;
+    padding-top: 180px;
+    margin: auto;
+}
+
+div.about-content-container{
+    margin: auto;
+}
+
+.about{
+    color: rgba(22, 22, 22, 0.8);
+}
+
+h1.about-bold{
+    font-size: 63px;
+    line-height: 95%;
+    font-weight: 900
+}
+
+h2.about-semi-bold{
+    font-size: 45px;
+    line-height: 95%;
+    font-weight: 400;
+}
+
+p.about-p{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 45px 0 18px;
+}
+
+@media screen and (max-width: 900px) {
+    div.about-row{
+        padding-left: 60%;
+        padding-right: 45px;
+        margin: auto;
+    }
+}
