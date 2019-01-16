@@ -1,0 +1,25 @@
+div.skills-container {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    background-color: var(--color-darker)
+}
+
+div.skills-list-container {
+    width: 50%;
+    height: fit-content;
+    background-color: var(--color-not-so-dark)
+}
+
+div.skills-paragraph-container {
+    width: 50%;
+    height: fit-content;
+    background-color: var(--color-darker)
+}
+
+p.skills-p{
+    color: var(--color-light);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 45px 0 18px;
+}

@@ -30,7 +30,7 @@ div.about-content-container{
 }
 
 .about{
-    color: rgba(22, 22, 22, 0.8);
+    color: var(--color-darker)
 }
 
 h1.about-bold{

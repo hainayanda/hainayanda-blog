@@ -4,6 +4,16 @@
   margin: 0;
 }
 
+:root {
+  --color-primary: #25c6d8;
+  --color-light: rgba(255, 255, 255, 0.8);
+  --color-transparent-light: rgba(255, 255, 255, 0.2);
+  --color-light-grey: #aaaaaa;
+  --color-dark: rgba(22, 22, 22, 0.54);
+  --color-darker: #161616;
+  --color-not-so-dark: #242424;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }

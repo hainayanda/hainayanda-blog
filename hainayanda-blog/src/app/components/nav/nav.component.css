@@ -4,7 +4,7 @@
     z-index: 9;
     font-size: 16px;
     font-weight: 700;
-    background-color: rgba(22, 22, 22, 0.54);
+    background-color: var(--color-dark);
     padding-bottom: 10px;
 }
 
@@ -25,16 +25,16 @@
 
 .nav-links {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-light)
 }
 
 .nav-links.active {
-    color: #ffffff;
+    color: white
 }
 
 .logo {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-light)
 }
 
 .main-nav li {
@@ -54,12 +54,12 @@
     top: 10px;
     right: 20px;
     cursor: pointer;
-    color: #aaaaaa;
+    color: var(--color-light-grey);
     font-size: 24px;
 }
 
 .navbar-toggle:hover {
-    color: #ffffff;
+    color: white
 }
 
 .active {
@@ -105,6 +105,6 @@
     .logo:hover,
 
     .nav-links:hover {
-        color: #ffffff;
+        color: white
     }
 }
