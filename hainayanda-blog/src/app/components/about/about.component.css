@@ -8,9 +8,10 @@ div.about-header {
 
 div.about-header-bg{
     z-index: -1;
-    background-image: url("https://res.cloudinary.com/hainayanda/image/upload/v1547404396/home.jpg");
+    background-image: url("https://res.cloudinary.com/hainayanda/image/upload/v1547411349/home.jpg");
     background-size: cover;
     position: fixed;
+    background-position: center;
     top: 0px;
     left: 0px;
     min-width: 100%;
@@ -50,11 +51,44 @@ p.about-p{
     font-weight: 400;
     padding: 45px 0 18px;
 }
+i.button-r-arrow{
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+a.button{
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 300;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 9px;
+    margin-right: 18px;
+    margin-top: 18px;
+    margin-bottom: 27px;
+    display: inline-block;
+}
+
+a.button:hover{
+    opacity: 0.7;
+}
+
+a.button-project{
+    background-color: var(--color-darker);
+}
+
+a.button-contact{
+    background-color: var(--color-dark);
+}
 
 @media screen and (max-width: 900px) {
     div.about-row{
         padding-left: 60%;
         padding-right: 45px;
         margin: auto;
+    }
+
+    div.about-row{
+        padding-left: 27px;
     }
 }

@@ -1,3 +1,20 @@
-<p>
-  about-dev-skills works!
-</p>
+<div class="dev-skills-container">
+  <div class="row">
+    <div class="column" *ngFor="let skill of skills">
+      <h4>{{skill.name}}</h4>
+        <circle-progress
+        [percent]="skill.value * 100"
+        [radius]="54"
+        [outerStrokeWidth]="12"
+        [innerStrokeWidth]="2"
+        [innerStrokeColor]="'#6ff9ff'"
+        [outerStrokeColor]="'#25c6d8'"
+        [animation]="true"
+        [animationDuration]="300"
+        [showTitle]="false"
+        [showSubtitle] = "false"
+        [showUnits]="false"
+      ></circle-progress>
+    </div>
+  </div>
+</div>

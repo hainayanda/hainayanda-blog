@@ -8,7 +8,7 @@ div.skills-container {
 
 div.skills-list-container {
     width: 50%;
-    height: fit-content;
+    min-height: fit-content;
     padding: 73px 73px 73px 73px;
     background-color: var(--color-not-so-dark)
 }
@@ -44,7 +44,7 @@ div.progress{
 }
 
 h3{
-    color: var(--color-light);
+    color: var(--color-lighter);
     font-size: 20px;
     font-weight: 300;
 }

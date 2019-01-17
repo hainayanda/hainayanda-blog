@@ -3,24 +3,30 @@
   <div class="about-header">
     <div class="about-row">
       <div class="about-content-container">
-        <h1 class="about about-bold">
-          About Me
+        <h1 class="about about-bold line-breaker">
+          {{mainPage.title}}
         </h1>
-        <h2 class="about about-semi-bold">
-          Nayanda Haberty
+        <h2 class="about about-semi-bold line-breaker">
+          {{mainPage.subtitle}}
         </h2>
-        <p class="about about-p">
-          Everything started even before I'm going to college. It started in my high school period. 
-          Started when I try and learn by myself to exploit some open source bot for online games until I decided to seriously learn about programming. 
-          <br>
-          <br>
-          My curiousity started from the question about "how can some electrical device can perform such a thing just by a bunch of code?". 
-          This curiousity lead me to Computer Engineering Major. Later this curiousity became passion in programming, in like all type of software development. 
+        <p class="about about-p line-breaker">
+          {{mainPage.paragraph}}
         </p>
       </div>
+      <div>
+          <a class="button button-project" routerLink="/project">
+            My Projects
+            <i class="button-r-arrow fas fa-caret-right"></i>
+          </a>
+          <a class="button button-contact" href="mailto:nayanda1@outlook.com">
+            Contact Me
+            <i class="button-r-arrow fas fa-caret-right"></i>
+          </a>
+        </div>
     </div>
   </div>
-  <app-about-dev-skills></app-about-dev-skills>
-  <app-about-skills></app-about-skills>
+  <app-about-skills [title]="skills.title" [description]="skills.description" [skills]="skills.skills"></app-about-skills>
+  <app-about-dev-skills [skills]="skills.devSkills"></app-about-dev-skills>
+  <app-about-other-skills [skills]="skills.otherSkills"></app-about-other-skills>
   <app-about-experiences></app-about-experiences>
 </main>

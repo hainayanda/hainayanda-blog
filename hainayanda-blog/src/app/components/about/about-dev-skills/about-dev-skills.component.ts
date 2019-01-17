@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Skill } from 'src/app/models/skills';
 
 @Component({
   selector: 'app-about-dev-skills',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutDevSkillsComponent implements OnInit {
 
+  @Input() skills: Skill[]
+  
   constructor() { }
 
   ngOnInit() {

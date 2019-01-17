@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MainPage } from 'src/app/models/main.page';
+import { HomeService } from 'src/app/services/home.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  page: MainPage
+
+  constructor(private homeService: HomeService) { }
 
   ngOnInit() {
+    this.getPage()
+  }
+
+  getPage(){
+    this.homeService.getHomePage().subscribe(page => this.page = page)
   }
 
 }
