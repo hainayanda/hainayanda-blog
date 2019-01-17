@@ -1,7 +1,7 @@
 <div class="dev-skills-container">
   <div class="row">
     <div class="column" *ngFor="let skill of skills">
-      <h4>{{skill.name}}</h4>
+      <h4 class="h4-dev-skills">{{skill.name}}</h4>
         <circle-progress
         [percent]="skill.value * 100"
         [radius]="54"

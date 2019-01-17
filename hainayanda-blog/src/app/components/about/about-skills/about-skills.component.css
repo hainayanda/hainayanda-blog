@@ -22,15 +22,16 @@ div.skills-paragraph-container {
 
 p.skills-p{
     color: var(--color-light);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
+    padding: 24px
 }
 
 ul.skills-list{
     list-style-type: none;
 }
 
-li{
+ul.skills-list li{
     margin: 27px
 }
 
@@ -43,9 +44,16 @@ div.progress{
     border-radius: 10px;
 }
 
-h3{
-    color: var(--color-lighter);
-    font-size: 20px;
+h2.h2-skills-title{
+    color: var(--color-semi-transparent-light);
+    font-size: 30px;
+    font-weight: 400;
+    padding: 24px;
+}
+
+h3.h3-skills{
+    color: var(--color-semi-transparent-light);
+    font-size: 18px;
     font-weight: 300;
 }
 

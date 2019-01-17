@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ExternalLinks } from 'src/app/models/external.links';
+import { PageService } from 'src/app/services/page.service';
+import * as $ from 'jquery'
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -7,22 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  externalLinks: ExternalLinks
+
+  constructor(private pageService: PageService) { }
 
   ngOnInit() {
-    let navbar = document.getElementById('navbar');
-    let mainNav = document.getElementById('js-menu');
-    let navBarToggle = document.getElementById('js-navbar-toggle');
+    this.getExternalLinks()
 
-    navBarToggle.addEventListener('click', function () {
-      mainNav.classList.toggle('active');
-      if(mainNav.classList.contains('active')){
-        navbar.style.height = "180px"
-      }
-      else {
-        navbar.style.height = "72px"
-      }
+    $("#js-menu").click(() => $("#js-navbar-toggle").toggleClass("active"))
+
+    $(() => {
+      $(document).scroll(function () {
+        var $nav = $(".navbar");
+        $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
+      });
     });
+  }
+
+  getExternalLinks(){
+    this.pageService.getExternalLinks().subscribe( externalLinks => this.externalLinks = externalLinks)
   }
 
 }

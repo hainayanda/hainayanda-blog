@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MainPage } from '../models/main.page';
+import { MainPage } from '../models/page';
 import { Observable, of, Scheduler } from 'rxjs';
 
 @Injectable({

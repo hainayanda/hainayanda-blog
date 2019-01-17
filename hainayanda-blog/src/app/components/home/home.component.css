@@ -1,8 +1,16 @@
 div.home-container{
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+div.home-bg{
+    z-index: -1;
     background-image: url("https://res.cloudinary.com/hainayanda/image/upload/v1547409056/home-bg.jpg");
     background-size: cover;
-    position: fixed;
     background-position: center;
+    position: fixed;
     top: 0px;
     left: 0px;
     min-width: 100%;

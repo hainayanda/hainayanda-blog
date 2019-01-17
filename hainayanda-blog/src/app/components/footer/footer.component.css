@@ -1,0 +1,66 @@
+div.footer {
+    background-color: var(--color-darker);
+    min-height: fit-content;
+    width: 100%;
+    display: flex;
+}
+
+div.footer div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.footer-text-container {
+    min-width: fit-content;
+    max-width: 63%;
+    padding: 9px 45px 9px;
+}
+
+div.footer-icon-container {
+    width: fit-content;
+    vertical-align: middle;
+    margin: auto 45px auto auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.icon-footer {
+    display: flex;
+    align-self: flex-start;
+    list-style-type: none;
+}
+
+.icon-footer li {
+    margin: 27px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.footer-links {
+    text-decoration: none;
+    color: var(--color-primary)
+}
+
+.footer-links:hover {
+    color: var(--color-secondary)
+}
+
+h3.h3-footer{
+    font-size: 21px;
+    font-weight: 400;
+    color: white;
+}
+
+p.p-footer{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-semi-transparent-light);
+}
+
+h4.phone-number{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-semi-transparent-light);
+    
+}

@@ -12,6 +12,7 @@ import { AboutSkillsComponent } from './components/about/about-skills/about-skil
 import { AboutDevSkillsComponent } from './components/about/about-dev-skills/about-dev-skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AboutOtherSkillsComponent } from './components/about/about-other-skills/about-other-skills.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,12 @@ import { AboutOtherSkillsComponent } from './components/about/about-other-skills
     NavComponent,
     AboutComponent,
     ProjectsComponent,    
-    AboutExperiencesComponent, AboutSkillsComponent, AboutDevSkillsComponent, AboutOtherSkillsComponent
+    AboutExperiencesComponent, AboutSkillsComponent, AboutDevSkillsComponent, AboutOtherSkillsComponent, FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({
-      // set defaults here
       radius: 100,
       outerStrokeWidth: 16,
       innerStrokeWidth: 8,
