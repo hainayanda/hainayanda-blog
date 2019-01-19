@@ -82,11 +82,11 @@ const MOCK_EXPERIENCE: Experience[] = [
   {
     officeName: "PT Kreatif Media Karya",
     officeLogo: "https://res.cloudinary.com/hainayanda/image/upload/v1547886175/KMKLogo.png",
-    position: "iOS Developer",
+    position: "Test Engineer",
     startDate: new Date(2017, 2),
     endDate: new Date(2017, 5),
     location: "Central Jakarta, Greater Jakarta, Indonesia",
-    description: "Create test, maintain test and creating tools for Liputan6.com"
+    description: "Create and maintain test and develop tester tools for Liputan6.com"
   },
   {
     officeName: "PT Aprisma Wirecard",

@@ -31,3 +31,23 @@ p{
 .line-breaker {
   white-space: pre-line;
 }
+
+.separator{
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: 27px;
+  margin-block-start: 27px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: var(--color-transparent-light)
+}
+
+.separator-thin {
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: 27px;
+  margin-block-start: 27px;
+  height: 1px;
+  border-radius: 0.5px;
+  background-color: var(--color-transparent-light)
+}

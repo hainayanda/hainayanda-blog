@@ -7,4 +7,61 @@
 }
 
 div.experiences-title{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-semi-transparent-light)
+}
+
+div.experiences-list{
+    width: 100%;
+    vertical-align: middle;
+}
+
+div.experience:hover {
+    background-color: var(--color-darker);
+}
+
+div.experience {
+    display: flex;
+    float: left;
+    width: 48%;
+    padding: 18px 18px 36px 18px;
+    margin-top: 18px;
+    background-color: var(--color-dark);
+    border-radius: 18px;
+}
+
+div.company-photo {
+    width: 90px;
+    height: 90px;
+    margin: 27px;
+}
+
+div.experience-description {
+    padding-left: 18px;
+}
+
+.experience-description h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-light)
+}
+
+.experience-description h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-light)
+}
+
+.experience-description h5 {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-light)
+}
+
+@media screen and (max-width: 900px) {
+
+    div.experience {
+        width: 100%;
+    }
 }

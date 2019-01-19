@@ -3,20 +3,16 @@
     <h2 class="experiences-title">Experience</h2>
   </div>
   <div class="experiences-list">
-    <div *ngFor="let experience of experiences">
+    <div class="experience" *ngFor="let experience of experiences; let i = index" [style.margin-right]="marginRightAt(i)">
       <div class="company-photo">
         <img [src]="experience.officeLogo" height="90px" width="90px">
       </div>
       <div class="experience-description">
-        <ul>
-          <li>
-            <h3>{{experience.position}}</h3>
-            <h4>{{experience.officeName}}</h4>
-            <h5>{{formatDate(experience.startDate)}} - {{formatDate(experience.startDate)}}</h5>
-            <h5>{{experience.location}}</h5>
-            <h5>{{experience.description}}</h5>
-          </li>
-        </ul>
+        <h3>{{experience.position}}</h3>
+        <h4>{{experience.officeName}}</h4>
+        <h5>{{formatDate(experience.startDate)}} - {{formatDate(experience.endDate)}}</h5>
+        <h5>{{experience.location}}</h5>
+        <h5>{{experience.description}}</h5>
       </div>
     </div>
   </div>
