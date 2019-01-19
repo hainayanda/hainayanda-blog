@@ -1,3 +1,12 @@
-<p>
-  about-other-skills works!
-</p>
+<div class="other-skills-container">
+  <h3>Other notable skills</h3>
+  <ul class="other-skills-list">
+    <li *ngFor="let skill of skills">
+      <div>
+        <h4>
+          {{skill}}
+        </h4>
+      </div>
+    </li>
+  </ul>
+</div>

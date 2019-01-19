@@ -1,0 +1,10 @@
+.experiences-container{
+    background-color: var(--color-not-so-dark);
+    margin: 0;
+    display: table;
+    width: 100%;
+    padding: 36px;
+}
+
+div.experiences-title{
+}

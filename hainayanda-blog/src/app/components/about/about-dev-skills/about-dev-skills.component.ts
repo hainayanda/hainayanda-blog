@@ -9,7 +9,7 @@ import { Skill } from 'src/app/models/skills';
 export class AboutDevSkillsComponent implements OnInit {
 
   @Input() skills: Skill[]
-  
+
   constructor() { }
 
   ngOnInit() {

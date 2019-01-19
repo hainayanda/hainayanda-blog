@@ -5,13 +5,17 @@ import { Observable, of, Scheduler } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class HomeService implements IHomeService {
 
   constructor() { }
 
-  getHomePage() : Observable<MainPage> {
+  getHomePage(): Observable<MainPage> {
     return of(MOCK_HOME);
   }
+}
+
+export interface IHomeService {
+  getHomePage(): Observable<MainPage>
 }
 
 const MOCK_HOME: MainPage = {

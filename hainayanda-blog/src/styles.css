@@ -5,9 +5,9 @@
 }
 
 :root {
-  --color-primary: #25c6d8;
-  --color-secondary: #6ff9ff;
-  --color-primary-dark: #0095a8;
+  --color-primary: #d32f2f;
+  --color-secondary: #ff6659;
+  --color-primary-dark: #9a0007;
   --color-lighter: rgba(255, 255, 255, 0.9);
   --color-light: rgba(255, 255, 255, 0.8);
   --color-semi-transparent-light: rgba(255, 255, 255, 0.4);

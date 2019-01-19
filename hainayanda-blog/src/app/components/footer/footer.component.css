@@ -11,14 +11,11 @@ div.footer div {
 }
 
 div.footer-text-container {
-    min-width: fit-content;
-    max-width: 63%;
+    width: 72%;
     padding: 9px 45px 9px;
 }
 
 div.footer-icon-container {
-    width: fit-content;
-    vertical-align: middle;
     margin: auto 45px auto auto;
     width: fit-content;
     height: fit-content;
@@ -63,4 +60,28 @@ h4.phone-number{
     font-weight: 300;
     color: var(--color-semi-transparent-light);
     
+}
+
+@media screen and (max-width: 900px) {
+
+    div.footer-icon-container {
+        margin: auto 45px auto auto;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .icon-footer {
+        display: table;
+        list-style-type: none;
+    }
+
+    .icon-footer li {
+        margin: 12px;
+        float: none;
+    }
+
+    div.footer-text-container {
+        width: 81%;
+        padding: 9px 45px 9px;
+    }
 }

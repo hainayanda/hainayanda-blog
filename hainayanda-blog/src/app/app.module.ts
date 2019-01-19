@@ -20,7 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     NavComponent,
     AboutComponent,
-    ProjectsComponent,    
+    ProjectsComponent,
     AboutExperiencesComponent, AboutSkillsComponent, AboutDevSkillsComponent, AboutOtherSkillsComponent, FooterComponent
   ],
   imports: [

@@ -1,0 +1,62 @@
+ul.other-skills-list {
+    text-align: center;
+    margin: 0;
+}
+
+ul.other-skills-list li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16%;
+}
+
+ul.other-skills-list li div {
+    padding: 12px 18px;
+    border-radius: 9px;
+    margin-right: 18px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    background-color: var(--color-dark)
+}
+
+ul.other-skills-list li div:hover {
+    background-color: var(--color-darker);
+}
+
+ul.other-skills-list li div h4 {
+    align-content: center;
+    color: var(--color-primary);
+    margin-top: 9px;
+    margin-bottom: 9px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+ul.other-skills-list li div:hover h4 {
+    color: var(--color-secondary);
+}
+
+div.other-skills-container {
+    width: 100%;
+    margin: 0;
+    padding: 9px;
+    background-color: var(--color-not-so-dark);
+    border-bottom: 1px solid var(--color-semi-transparent-light);
+    border-bottom-width: 90%
+}
+
+div.other-skills-container h3 {
+    margin-left: 20px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    color: var(--color-semi-transparent-light);
+    font-size: 23px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    ul.other-skills-list li {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30%;
+    }
+}

@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import { Skills } from '../models/skills';
 import { MainPage } from '../models/page';
 import { Observable, of } from 'rxjs';
+import { Experience } from '../models/experience';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AboutService {
+export class AboutService implements IAboutService {
 
   constructor() { }
 
@@ -17,14 +18,24 @@ export class AboutService {
   getAboutPage(): Observable<MainPage> {
     return of(MOCK_ABOUT);
   }
+
+  getExperiences(): Observable<Experience[]> {
+    return of(MOCK_EXPERIENCE);
+  }
+}
+
+export interface IAboutService {
+  getSkills(): Observable<Skills>
+  getAboutPage(): Observable<MainPage>
+  getExperiences(): Observable<Experience[]>
 }
 
 const MOCK_ABOUT: MainPage = {
   title: "About Me",
   subtitle: "Nayanda Haberty",
   paragraph: "Born at Jakarta, on 10 May 1991. Love to draw, painting and gaming. Passionate with science, history and technology. Now still living in Jakarta. \n\n" +
-    "Everything started even before I'm going to college. It started in my high school period. Started when I try and learn by myself to exploit some open source bot for online games until I decided to seriously learn about programming. \n\n" +
-    "My curiousity started from the question about \"how can some electrical device can perform such a thing just by a bunch of code?\". This curiousity lead me to Computer Engineering Major. Later this curiousity became passion in programming, in like all type of software development."
+    "Everything started even before I'm going to college but in my high school period when I try and learn by myself to exploit some open source bot for online games. \n\n" +
+    "My curiousity started from the question about \"how can some electrical device can perform such a thing just by a bunch of code?\" which then lead me to Computer Engineering Major. Later this curiousity became passion."
 }
 
 const MOCK_SKILLS: Skills = {
@@ -46,5 +57,53 @@ const MOCK_SKILLS: Skills = {
     { name: "Desktop Application", value: 0.75 },
     { name: "Hardware Programming", value: 0.7 }
   ],
-  otherSkills: ["Spring Framework", "AngularJS", "JQuery", "SQL", "MongoDB", "REST API", ".Net Core", "ASP .NET", "Microcontroller", "Basic Electronics", "PERL"]
+  otherSkills: ["Spring Framework", "AngularJS", "JQuery", "SQL", "MongoDB", "REST API", ".Net Core", "ASP .NET", "Micro Controller", "Basic Electronics", "PERL"]
 }
+
+const MOCK_EXPERIENCE: Experience[] = [
+  {
+    officeName: "Bukalapak",
+    officeLogo: "https://res.cloudinary.com/hainayanda/image/upload/v1547886175/BukalapakLogo.png",
+    position: "iOS Developer",
+    startDate: new Date(2018, 10),
+    endDate: null,
+    location: "South Jakarta, Greater Jakarta, Indonesia",
+    description: "Developing and maintain Bukalapak iOS Application"
+  },
+  {
+    officeName: "Kencana Graha Global",
+    officeLogo: "https://res.cloudinary.com/hainayanda/image/upload/v1547886175/KG-Logo.png",
+    position: "Software Developer",
+    startDate: new Date(2017, 5),
+    endDate: new Date(2018, 9),
+    location: "Central Jakarta, Greater Jakarta, Indonesia",
+    description: "Developing Back-End, iOS and Android application for start-up"
+  },
+  {
+    officeName: "PT Kreatif Media Karya",
+    officeLogo: "https://res.cloudinary.com/hainayanda/image/upload/v1547886175/KMKLogo.png",
+    position: "iOS Developer",
+    startDate: new Date(2017, 2),
+    endDate: new Date(2017, 5),
+    location: "Central Jakarta, Greater Jakarta, Indonesia",
+    description: "Create test, maintain test and creating tools for Liputan6.com"
+  },
+  {
+    officeName: "PT Aprisma Wirecard",
+    officeLogo: "https://res.cloudinary.com/hainayanda/image/upload/v1547886175/WirecardLogo.png",
+    position: "Java Developer",
+    startDate: new Date(2016, 5),
+    endDate: new Date(2017, 1),
+    location: "South Jakarta, Greater Jakarta, Indonesia",
+    description: "Developing Back-End, iOS and Android application for start-up"
+  },
+  {
+    officeName: "Freelance",
+    officeLogo: "https://res.cloudinary.com/hainayanda/image/upload/v1547886175/GraphicDesignLogo.png",
+    position: "Graphic Designer",
+    startDate: new Date(2016, 3),
+    endDate: new Date(2016, 5),
+    location: "South Jakarta, Greater Jakarta, Indonesia",
+    description: "Design Poster, Banner, Logo"
+  },
+]

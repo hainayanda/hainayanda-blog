@@ -6,11 +6,11 @@ import { ExternalLinks } from '../models/external.links';
 @Injectable({
   providedIn: 'root'
 })
-export class PageService {
+export class PageService implements IPageService {
 
   constructor() { }
 
-  getFooter() : Observable<FooterPage> {
+  getFooter(): Observable<FooterPage> {
     return of(MOCK_FOOTER);
   }
 
@@ -18,6 +18,11 @@ export class PageService {
     return of(MOCK_EXTERNAL_LINKS)
   }
 
+}
+
+export interface IPageService {
+  getFooter(): Observable<FooterPage>
+  getExternalLinks(): Observable<ExternalLinks>
 }
 
 const MOCK_EXTERNAL_LINKS: ExternalLinks = {

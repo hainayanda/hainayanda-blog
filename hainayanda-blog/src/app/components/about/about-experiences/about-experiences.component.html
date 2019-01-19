@@ -1,3 +1,23 @@
-<p>
-  about-experiences works!
-</p>
+<div class="experiences-container">
+  <div class=experiences-title>
+    <h2 class="experiences-title">Experience</h2>
+  </div>
+  <div class="experiences-list">
+    <div *ngFor="let experience of experiences">
+      <div class="company-photo">
+        <img [src]="experience.officeLogo" height="90px" width="90px">
+      </div>
+      <div class="experience-description">
+        <ul>
+          <li>
+            <h3>{{experience.position}}</h3>
+            <h4>{{experience.officeName}}</h4>
+            <h5>{{formatDate(experience.startDate)}} - {{formatDate(experience.startDate)}}</h5>
+            <h5>{{experience.location}}</h5>
+            <h5>{{experience.description}}</h5>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

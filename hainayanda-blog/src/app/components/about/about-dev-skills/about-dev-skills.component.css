@@ -23,7 +23,8 @@ h4.h4-dev-skills {
 }
 
 div.dev-skills-container {
-  background-color: var(--color-not-so-dark)
+  background-color: var(--color-not-so-dark);
+  padding: 27px;
 }
 
 @media screen and (max-width: 768px) {

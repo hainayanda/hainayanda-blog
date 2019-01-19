@@ -112,6 +112,6 @@
     .logo:hover,
 
     .nav-links:hover {
-        color: white
+        color: var(--color-secondary)
     }
 }

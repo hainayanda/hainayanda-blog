@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AboutService } from 'src/app/services/about.service';
+import { Component, OnInit, Inject } from '@angular/core';
+import { IAboutService, AboutService } from 'src/app/services/about.service';
 import { MainPage } from 'src/app/models/page';
 import { Skills } from 'src/app/models/skills';
 import { PageComponent } from '../PageComponent';
@@ -7,23 +7,26 @@ import { PageComponent } from '../PageComponent';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
+  providers: [
+    {provide: 'IAboutService', useClass: AboutService}
+  ]
 })
 export class AboutComponent extends PageComponent implements OnInit {
 
   mainPage: MainPage;
   skills: Skills
 
-  constructor(private aboutService: AboutService) {
+  constructor(@Inject('IAboutService') private aboutService: IAboutService) {
     super()
-   }
+  }
 
   ngOnInit() {
     this.getPage()
     this.activateContactMe()
   }
 
-  getPage(){
+  getPage() {
     this.aboutService.getAboutPage().subscribe(page => this.mainPage = page)
     this.aboutService.getSkills().subscribe(skills => this.skills = skills)
   }
