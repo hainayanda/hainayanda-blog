@@ -1,3 +1,30 @@
-<p>
-  projects works!
-</p>
+<div class="projects-container">
+  <div class="projects-header">
+    <h1 class="text-header">My Project</h1>
+    <p class="text-header">
+      Here are some of my self projects portfolio.
+      <br> All of them mostly if not all are developed by myself.
+    </p>
+  </div>
+  <div class="project-tags">
+    <ul>
+      <li *ngFor="let tag of tags">
+        <div [id]="formatTagId(tag)" (click)="onTagClicked(tag)">
+          <h4>
+            {{tag}}
+          </h4>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="separator"></div>
+  <div class="projects">
+    <div *ngFor="let project of projectWithAppliedTags" class="project-container">
+      <div class="project">
+        <img [src]="primaryPictureOf(project)" class="project-primary-photo">
+        <h3>{{project.name}}</h3>
+        <h5>{{formatDate(project.startedDate)}} - {{formatDate(project.endDate)}}</h5>
+      </div>
+    </div>
+  </div>
+</div>

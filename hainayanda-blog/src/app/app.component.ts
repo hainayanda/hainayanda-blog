@@ -11,4 +11,8 @@ export class AppComponent {
   ngOnInit() {
     this.router.navigate(['home'])
   }
+  
+  getRouterOutletState(outlet) {
+    return outlet.isActivated ? outlet.activatedRoute : '';
+  }
 }

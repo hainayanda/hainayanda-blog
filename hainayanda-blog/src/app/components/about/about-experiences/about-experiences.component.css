@@ -24,7 +24,6 @@ div.experience:hover {
 div.experience {
     display: flex;
     float: left;
-    width: 48%;
     padding: 18px 18px 36px 18px;
     margin-top: 18px;
     background-color: var(--color-dark);
@@ -57,11 +56,4 @@ div.experience-description {
     font-size: 14px;
     font-weight: 300;
     color: var(--color-light)
-}
-
-@media screen and (max-width: 900px) {
-
-    div.experience {
-        width: 100%;
-    }
 }

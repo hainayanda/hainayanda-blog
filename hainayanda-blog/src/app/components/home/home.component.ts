@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MainPage } from 'src/app/models/page';
 import { IHomeService, HomeService } from 'src/app/services/home.service';
-import { PageComponent } from '../PageComponent';
+import { PageComponent } from '../BaseComponent';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

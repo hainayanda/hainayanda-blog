@@ -1,32 +1,30 @@
-<main>
-  <div class="about-header-bg"></div>
-  <div class="about-header">
-    <div class="about-row">
-      <div class="about-content-container">
-        <h1 class="about about-bold line-breaker">
-          {{mainPage.title}}
-        </h1>
-        <h2 class="about about-semi-bold line-breaker">
-          {{mainPage.subtitle}}
-        </h2>
-        <p class="about about-p line-breaker">
-          {{mainPage.paragraph}}
-        </p>
-      </div>
-      <div>
-        <a class="button button-project" routerLink="/project">
-          My Projects
-          <i class="button-r-arrow fas fa-caret-right"></i>
-        </a>
-        <a class="button button-contact" id="contact-me">
-          Contact Me
-          <i class="button-r-arrow fas fa-caret-right"></i>
-        </a>
-      </div>
+<div class="about-header-bg"></div>
+<div class="about-header">
+  <div class="about-row">
+    <div class="about-content-container">
+      <h1 class="about about-bold line-breaker">
+        {{mainPage.title}}
+      </h1>
+      <h2 class="about about-semi-bold line-breaker">
+        {{mainPage.subtitle}}
+      </h2>
+      <p class="about about-p line-breaker">
+        {{mainPage.paragraph}}
+      </p>
+    </div>
+    <div>
+      <a class="button button-project" routerLink="/project">
+        My Projects
+        <i class="button-r-arrow fas fa-caret-right"></i>
+      </a>
+      <a class="button button-contact" id="contact-me">
+        Contact Me
+        <i class="button-r-arrow fas fa-caret-right"></i>
+      </a>
     </div>
   </div>
-  <app-about-skills [title]="skills.title" [description]="skills.description" [skills]="skills.skills"></app-about-skills>
-  <app-about-dev-skills [skills]="skills.devSkills"></app-about-dev-skills>
-  <app-about-other-skills [skills]="skills.otherSkills"></app-about-other-skills>
-  <app-about-experiences></app-about-experiences>
-</main>
+</div>
+<app-about-skills [title]="skills.title" [description]="skills.description" [skills]="skills.skills"></app-about-skills>
+<app-about-dev-skills [skills]="skills.devSkills"></app-about-dev-skills>
+<app-about-other-skills [skills]="skills.otherSkills"></app-about-other-skills>
+<app-about-experiences></app-about-experiences>

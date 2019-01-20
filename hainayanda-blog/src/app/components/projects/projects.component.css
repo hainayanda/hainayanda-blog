@@ -1,0 +1,163 @@
+div.projects-container {
+    top: 0px;
+    left: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: var(--color-not-so-dark);
+}
+
+div.projects-header {
+    padding: 90px 36px 36px 36px;
+}
+
+div.project-tags {
+    padding: 36px 36px 0px 36px;
+}
+
+.text-header {
+    color: white;
+}
+
+.projects-header h1.text-header {
+    font-size: 54px;
+    font-weight: 700;
+    text-align: center
+}
+
+.projects-header p.text-header {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center
+}
+
+.projects-header {
+    padding: 45px
+}
+
+div.project-tags ul {
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 45px;
+}
+
+div.project-tags ul li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+}
+
+div.project-tags ul li div {
+    padding: 12px 18px;
+    border-radius: 9px;
+    margin-right: 18px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    background-color: var(--color-dark)
+}
+
+div.project-tags ul li div:hover {
+    background-color: var(--color-darker);
+}
+
+div.project-tags ul li div.active {
+    background-color: var(--color-primary);
+}
+
+div.project-tags ul li div h4 {
+    align-content: center;
+    color: var(--color-light);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+div.project-tags ul li div:hover h4 {
+    color: white;
+}
+
+div.project-tags ul li div.active h4 {
+    color: white;
+    font-weight: 700;
+}
+
+div.projects {
+    width: 100%;
+    height: fit-content;
+    padding: 36px;
+    display: table;
+    vertical-align: middle;
+}
+
+div.project-container {
+    display: flex;
+    float: left;
+    width: 20%;
+}
+
+div.project {
+    margin: 9px;
+    background-color: var(--color-dark);
+    padding: 18px;
+    border-radius: 9px;
+}
+
+div.project h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 90%;
+    color: var(--color-light)
+}
+
+div.project h5 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 90%;
+    color: var(--color-semi-transparent-light)
+}
+
+div.project:hover h3 {
+    color: white
+}
+
+div.project:hover h5 {
+    color: white
+}
+
+div.project:hover{
+    background-color: var(--color-darker);
+}
+
+.project-primary-photo {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4.5px;
+}
+
+@media screen and (max-width: 1200) and (min-width: 901) {
+    div.project-tags ul li {
+        display: inline-block;
+        vertical-align: middle;
+        width: 25%;
+    }
+    div.project {
+        padding: 12px;
+    }
+    div.project-container {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 900) {
+    div.project-tags ul li {
+        display: inline-block;
+        vertical-align: middle;
+        width: 25%;
+    }
+    div.project {
+        padding: 12px;
+    }
+    div.project-container {
+        width: 50%;
+    }
+}
