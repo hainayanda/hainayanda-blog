@@ -20,14 +20,16 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.getExternalLinks()
 
-    $("#js-navbar-toggle").click(() => $("#js-menu").toggleClass("active"))
-
     $(() => {
       $(document).scroll(function () {
         var $nav = $(".navbar");
         $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
       });
     });
+  }
+
+  onNavMenuClicked(){
+    $("#js-menu").toggleClass("active")
   }
 
   getExternalLinks() {

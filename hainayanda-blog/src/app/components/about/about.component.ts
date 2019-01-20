@@ -23,7 +23,6 @@ export class AboutComponent extends PageComponent implements OnInit {
 
   ngOnInit() {
     this.getPage()
-    this.activateContactMe()
   }
 
   getPage() {

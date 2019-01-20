@@ -20,7 +20,6 @@ export class HomeComponent extends PageComponent implements OnInit {
 
   ngOnInit() {
     this.getPage()
-    this.activateContactMe()
   }
 
   getPage() {

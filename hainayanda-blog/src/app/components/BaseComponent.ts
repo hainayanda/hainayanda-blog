@@ -12,10 +12,9 @@ export class BaseComponent {
 }
 
 export class PageComponent extends BaseComponent {
-    activateContactMe() {
-        $("#contact-me").click(function () {
-            $("html, body").animate({ scrollTop: $(document).height() }, "slow");
-        });
+
+    onContactMeClicked(){
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
     }
 }
 
