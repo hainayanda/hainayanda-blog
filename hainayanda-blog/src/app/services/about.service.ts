@@ -57,7 +57,7 @@ const MOCK_SKILLS: Skills = {
     { name: "Desktop Application", value: 0.75 },
     { name: "Hardware Programming", value: 0.7 }
   ],
-  otherSkills: ["Spring Framework", "AngularJS", "JQuery", "SQL", "MongoDB", "REST API", ".Net Core", "ASP .NET", "Micro Controller", "Basic Electronics", "PERL"]
+  otherSkills: ["HTML", "CSS", "Spring Framework", "Angular", "JQuery", "SQL", "MongoDB", "REST API", ".Net Core", "ASP .NET", "Micro Controller", "Basic Electronics", "PERL", "Assembly Language"]
 }
 
 const MOCK_EXPERIENCE: Experience[] = [
