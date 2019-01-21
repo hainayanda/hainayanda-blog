@@ -13,6 +13,7 @@ import { AboutDevSkillsComponent } from './components/about/about-dev-skills/abo
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AboutOtherSkillsComponent } from './components/about/about-other-skills/about-other-skills.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProjectModalComponent } from './components/projects/project-modal/project-modal.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     NavComponent,
     AboutComponent,
     ProjectsComponent,
-    AboutExperiencesComponent, AboutSkillsComponent, AboutDevSkillsComponent, AboutOtherSkillsComponent, FooterComponent
+    AboutExperiencesComponent, AboutSkillsComponent, AboutDevSkillsComponent, AboutOtherSkillsComponent, FooterComponent, ProjectModalComponent
   ],
   imports: [
     BrowserModule,

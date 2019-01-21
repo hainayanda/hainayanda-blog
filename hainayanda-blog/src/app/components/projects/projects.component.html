@@ -3,7 +3,9 @@
     <h1 class="text-header">My Project</h1>
     <p class="text-header">
       Here are some of my self projects portfolio.
-      <br> All of them mostly if not all are developed by myself.
+      <br>Not including team project from office.
+      <br>All of them mostly if not all are developed by myself.
+      <br>Click any of them to see more about the project.
     </p>
   </div>
   <div class="project-tags">
@@ -20,11 +22,14 @@
   <div class="separator"></div>
   <div class="projects">
     <div *ngFor="let project of projectWithAppliedTags" class="project-container">
-      <div class="project">
+      <div class="project" (click)="onSelected(project)">
         <img [src]="primaryPictureOf(project)" class="project-primary-photo">
         <h3>{{project.name}}</h3>
         <h5>{{formatDate(project.startedDate)}} - {{formatDate(project.endDate)}}</h5>
       </div>
     </div>
   </div>
+</div>
+<div id="project-modal" class="modal">
+  <app-project-modal [project]="selectedProject"></app-project-modal>
 </div>

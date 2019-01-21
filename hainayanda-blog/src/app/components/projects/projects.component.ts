@@ -16,6 +16,7 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
   projects: Project[]
   appliedTags: ProjectTag[] = []
   projectWithAppliedTags: Project[]
+  selectedProject: Project
 
   get tags(): ProjectTag[] {
     let tags: Set<ProjectTag> = new Set()
@@ -56,6 +57,10 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
       this.projects = projects
       this.projectWithAppliedTags = this.getProjectWithAppliedTags()
     })
+  }
+
+  onSelected(project: Project){
+    this.selectedProject = project
   }
 
   onTagClicked(tag: ProjectTag) {
