@@ -1,6 +1,6 @@
 export class Project {
     name: string
-    picures: string[]
+    pictures: string[]
     tags: ProjectTag[]
     startedDate: Date
     endDate: Date

@@ -1,3 +1,7 @@
-<p>
-  project-modal works!
-</p>
+<div class="project-modal-content">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide *ngFor="let image of images; let i = index">
+          <img [src]="image">
+      </ng-template>
+    </ngb-carousel>
+</div>

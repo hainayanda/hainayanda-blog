@@ -21,7 +21,7 @@ export interface IProjectService {
 const MOCK_PROJECTS: Project[] = [
   {
     name: "Hai Nayanda Web",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548086452/n-logo.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548095243/hainayanda-1.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548095246/hainayanda-2.png",
@@ -35,7 +35,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Topaz Android",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091570/topaz-a-logo.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548136899/topaz-a-1.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548136911/topaz-a-2.png",
@@ -51,7 +51,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Topaz iOS",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548090182/topaz-i-logo.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548136903/topaz-i-1.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548136905/topaz-i-2.png",
@@ -67,7 +67,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "iOS Nativefier",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091569/ios-nat-logo.png"
     ],
     tags: [ProjectTag.iOS, ProjectTag.SDK, ProjectTag.OpenSource],
@@ -78,7 +78,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Droid Nativefier",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091569/droid-nat-logo.png"
     ],
     tags: [ProjectTag.Android, ProjectTag.SDK, ProjectTag.OpenSource],
@@ -89,7 +89,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Net Nativefier",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091569/net-nat-logo.png"
     ],
     tags: [ProjectTag.Net, ProjectTag.SDK, ProjectTag.OpenSource],
@@ -100,7 +100,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "iOS Eatr",
-    picures: [
+    pictures: [
     "https://res.cloudinary.com/hainayanda/image/upload/v1548086667/ios-logo.png"
     ],
     tags: [ProjectTag.iOS, ProjectTag.SDK, ProjectTag.OpenSource],
@@ -111,7 +111,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Droid Eatr",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548086658/droid-logo.png"
     ],
     tags: [ProjectTag.Android, ProjectTag.SDK, ProjectTag.OpenSource],
@@ -122,7 +122,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Net Eatr",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548086471/net-logo.png"
     ],
     tags: [ProjectTag.Net, ProjectTag.SDK, ProjectTag.OpenSource],
@@ -133,7 +133,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Catcher",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548086867/catcher_logo.png"
     ],
     tags: [ProjectTag.Net, ProjectTag.SDK, ProjectTag.OpenSource],
@@ -144,7 +144,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "RobotF-Extension",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548088369/robot-logo.png",
       "https://github.com/KMK-ONLINE/vscode-robotExtension/blob/master/smart-keyword-autocomplete.png",
       "https://github.com/KMK-ONLINE/vscode-robotExtension/blob/master/smart-resource-autocomplete.png",
@@ -163,7 +163,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Carrier",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548088663/carrier-logo.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548135407/2018-09-10_5.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548135407/2018-09-10_1.png",
@@ -179,7 +179,7 @@ const MOCK_PROJECTS: Project[] = [
   },
   {
     name: "Speaker Recognition",
-    picures: [
+    pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091569/speak-rec-logo.png",
       "https://res.cloudinary.com/hainayanda/image/upload/v1548135608/small.jpg"
     ],

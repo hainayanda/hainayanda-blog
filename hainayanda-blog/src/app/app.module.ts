@@ -14,6 +14,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AboutOtherSkillsComponent } from './components/about/about-other-skills/about-other-skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectModalComponent } from './components/projects/project-modal/project-modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProjectModalComponent } from './components/projects/project-modal/proje
     AboutExperiencesComponent, AboutSkillsComponent, AboutDevSkillsComponent, AboutOtherSkillsComponent, FooterComponent, ProjectModalComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({

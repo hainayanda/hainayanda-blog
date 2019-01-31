@@ -1,14 +1,17 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 import { ProjectService, IProjectService } from 'src/app/services/project.service';
 import { Project, ProjectTag } from 'src/app/models/project';
 import { BaseComponent } from '../BaseComponent';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
   providers: [
-    { provide: 'IProjectService', useClass: ProjectService }
+    { provide: 'IProjectService', useClass: ProjectService },
+    { provide: 'ModalService', useClass: NgbModal}
   ]
 })
 export class ProjectsComponent extends BaseComponent implements OnInit {
@@ -44,7 +47,9 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
     return foundProjects
   }
 
-  constructor(@Inject('IProjectService') private projectService: IProjectService) {
+  constructor(
+    @Inject('IProjectService') private projectService: IProjectService, 
+    @Inject('ModalService') private modalService: NgbModal) {
     super()
   }
 
@@ -61,6 +66,7 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
 
   onSelected(project: Project){
     this.selectedProject = project
+    $("#project-modal").show()
   }
 
   onTagClicked(tag: ProjectTag) {
@@ -81,9 +87,9 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
   }
 
   primaryPictureOf(project: Project): string {
-    if (project.picures == null) return "https://res.cloudinary.com/hainayanda/image/upload/v1547995844/project-blank.jpg"
-    else if (project.picures.length == 0) return "https://res.cloudinary.com/hainayanda/image/upload/v1547995844/project-blank.jpg"
-    return project.picures[0]
+    if (project.pictures == null) return "https://res.cloudinary.com/hainayanda/image/upload/v1547995844/project-blank.jpg"
+    else if (project.pictures.length == 0) return "https://res.cloudinary.com/hainayanda/image/upload/v1547995844/project-blank.jpg"
+    return project.pictures[0]
   }
 
 }
