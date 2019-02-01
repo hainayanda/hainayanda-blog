@@ -57,7 +57,7 @@ const MOCK_SKILLS: Skills = {
     { name: "Desktop Application", value: 0.75 },
     { name: "Hardware Programming", value: 0.7 }
   ],
-  otherSkills: ["HTML", "CSS", "Spring Framework", "Angular", "JQuery", "SQL", "MongoDB", "REST API", ".Net Core", "ASP .NET", "Micro Controller", "Basic Electronics", "PERL", "Assembly Language"]
+  otherSkills: ["HTML", "CSS", "Spring Framework", "Angular", "JQuery", "SQL", "MongoDB", "REST API", ".Net Core", "ASP .NET", "Micro Controller", "Basic Electronics", "PERL", "Computer Science", "Basic Machine Learning", "Assembly Language"]
 }
 
 const MOCK_EXPERIENCE: Experience[] = [
@@ -95,7 +95,7 @@ const MOCK_EXPERIENCE: Experience[] = [
     startDate: new Date(2016, 5),
     endDate: new Date(2017, 1),
     location: "South Jakarta, Greater Jakarta, Indonesia",
-    description: "Developing Back-End, iOS and Android application for start-up"
+    description: "Java Developer"
   },
   {
     officeName: "Freelance",

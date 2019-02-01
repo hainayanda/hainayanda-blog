@@ -10,16 +10,24 @@ export class ProjectService implements IProjectService {
   constructor() { }
 
   getProjects(): Observable<Project[]> {
-    return of(MOCK_PROJECTS)
+    return of(MOCK_PROJECTS.sort((a, b) => {
+      return (b.startedDate.getTime() - a.startedDate.getTime())
+    }))
+  }
+
+  getProjectBy(id: string): Observable<Project> {
+    return of(MOCK_PROJECTS.find(project => project.id == id))
   }
 }
 
 export interface IProjectService {
   getProjects(): Observable<Project[]>
+  getProjectBy(id: string): Observable<Project>
 }
 
 const MOCK_PROJECTS: Project[] = [
   {
+    id: "1",
     name: "Hai Nayanda Web",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548086452/n-logo.png",
@@ -34,6 +42,7 @@ const MOCK_PROJECTS: Project[] = [
     link: null
   },
   {
+    id: "2",
     name: "Topaz Android",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091570/topaz-a-logo.png",
@@ -50,6 +59,7 @@ const MOCK_PROJECTS: Project[] = [
     link: null
   },
   {
+    id: "3",
     name: "Topaz iOS",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548090182/topaz-i-logo.png",
@@ -66,6 +76,7 @@ const MOCK_PROJECTS: Project[] = [
     link: null
   },
   {
+    id: "4",
     name: "iOS Nativefier",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091569/ios-nat-logo.png"
@@ -77,6 +88,7 @@ const MOCK_PROJECTS: Project[] = [
     link: "https://github.com/nayanda1/iOSNativefier"
   },
   {
+    id: "5",
     name: "Droid Nativefier",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091569/droid-nat-logo.png"
@@ -88,6 +100,7 @@ const MOCK_PROJECTS: Project[] = [
     link: "https://github.com/nayanda1/DroidNativefier"
   },
   {
+    id: "6",
     name: "Net Nativefier",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091569/net-nat-logo.png"
@@ -99,6 +112,7 @@ const MOCK_PROJECTS: Project[] = [
     link: "https://github.com/nayanda1/NetNativefier"
   },
   {
+    id: "7",
     name: "iOS Eatr",
     pictures: [
     "https://res.cloudinary.com/hainayanda/image/upload/v1548086667/ios-logo.png"
@@ -110,6 +124,7 @@ const MOCK_PROJECTS: Project[] = [
     link: "https://github.com/nayanda1/iOSEatr"
   },
   {
+    id: "8",
     name: "Droid Eatr",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548086658/droid-logo.png"
@@ -121,6 +136,7 @@ const MOCK_PROJECTS: Project[] = [
     link: "https://github.com/nayanda1/DroidEatr"
   },
   {
+    id: "9",
     name: "Net Eatr",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548086471/net-logo.png"
@@ -132,17 +148,19 @@ const MOCK_PROJECTS: Project[] = [
     link: "https://github.com/nayanda1/NetEatr"
   },
   {
+    id: "10",
     name: "Catcher",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548086867/catcher_logo.png"
     ],
     tags: [ProjectTag.Net, ProjectTag.SDK, ProjectTag.OpenSource],
-    startedDate: new Date(2018, 9),
+    startedDate: new Date(2017, 9),
     endDate: null,
     description: "CosmosDB Based with MongoDB Interface, with generic DAO Design Pattern for .NET Framework with C# Language.",
     link: "https://github.com/catchid/catcher"
   },
   {
+    id: "11",
     name: "RobotF-Extension",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548088369/robot-logo.png",
@@ -162,6 +180,7 @@ const MOCK_PROJECTS: Project[] = [
     link: "https://github.com/KMK-ONLINE/vscode-robotExtension"
   },
   {
+    id: "12",
     name: "Carrier",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548088663/carrier-logo.png",
@@ -178,6 +197,7 @@ const MOCK_PROJECTS: Project[] = [
     link: "https://github.com/nayanda1/shipping-manager"
   },
   {
+    id: "13",
     name: "Speaker Recognition",
     pictures: [
       "https://res.cloudinary.com/hainayanda/image/upload/v1548091569/speak-rec-logo.png",

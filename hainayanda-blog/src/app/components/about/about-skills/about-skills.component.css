@@ -44,17 +44,13 @@ div.progress{
     border-radius: 10px;
 }
 
-h2.h2-skills-title{
+h5.skills-title{
     color: var(--color-semi-transparent-light);
-    font-size: 30px;
-    font-weight: 400;
     padding: 24px;
 }
 
-h3.h3-skills{
+h6.skills{
     color: var(--color-semi-transparent-light);
-    font-size: 18px;
-    font-weight: 300;
 }
 
 @media screen and (max-width: 768px) {

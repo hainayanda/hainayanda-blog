@@ -2,16 +2,14 @@ import { Component, OnInit, Inject, ViewChild, OnChanges, SimpleChange, SimpleCh
 import { ProjectService, IProjectService } from 'src/app/services/project.service';
 import { Project, ProjectTag } from 'src/app/models/project';
 import { BaseComponent } from '../BaseComponent';
-import { ProjectModalComponent } from './project-modal/project-modal.component';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
   providers: [
-    { provide: 'IProjectService', useClass: ProjectService },
-    { provide: 'ModalService', useClass: NgbModal}
+    { provide: 'IProjectService', useClass: ProjectService }
   ]
 })
 export class ProjectsComponent extends BaseComponent implements OnInit {
@@ -19,7 +17,6 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
   projects: Project[]
   appliedTags: ProjectTag[] = []
   projectWithAppliedTags: Project[]
-  selectedProject: Project
 
   get tags(): ProjectTag[] {
     let tags: Set<ProjectTag> = new Set()
@@ -48,8 +45,8 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
   }
 
   constructor(
-    @Inject('IProjectService') private projectService: IProjectService, 
-    @Inject('ModalService') private modalService: NgbModal) {
+    private router: Router,
+    @Inject('IProjectService') private projectService: IProjectService) {
     super()
   }
 
@@ -64,9 +61,8 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
     })
   }
 
-  onSelected(project: Project){
-    this.selectedProject = project
-    $("#project-modal").show()
+  onSelected(project: Project, content){
+    this.router.navigate(['project', project.id])
   }
 
   onTagClicked(tag: ProjectTag) {

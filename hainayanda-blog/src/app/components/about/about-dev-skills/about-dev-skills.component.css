@@ -14,10 +14,8 @@ circle {
   margin: auto;
 }
 
-h4.h4-dev-skills {
+h6.dev-skills {
   color: var(--color-semi-transparent-light);
-  font-size: 18px;
-  font-weight: 300;
   line-height: 120%;
   margin: auto, auto, 18px, auto;
 }

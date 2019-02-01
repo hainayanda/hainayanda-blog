@@ -29,22 +29,10 @@ div.home-content-container{
 
 h1.home{
     color: white;
-    line-height: 95%;
+    line-height: 95% !important;
 }
 
-h1.home-bold{
-    font-size: 63px;
-    font-weight: 900
-}
-
-h1.home-semi-bold{
-    font-size: 63px;
-    font-weight: 400;
-}
-
-p.home-p{
-    font-size: 21px;
-    font-weight: 300;
+p.home{
     color: white;
     padding: 45px 0 18px;
 }

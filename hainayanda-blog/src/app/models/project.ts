@@ -1,4 +1,5 @@
 export class Project {
+    id: string
     name: string
     pictures: string[]
     tags: ProjectTag[]

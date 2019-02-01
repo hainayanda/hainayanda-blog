@@ -23,16 +23,14 @@ ul.other-skills-list li div:hover {
     background-color: var(--color-darker);
 }
 
-ul.other-skills-list li div h4 {
+ul.other-skills-list li div h6 {
     align-content: center;
     color: var(--color-primary);
     margin-top: 9px;
     margin-bottom: 9px;
-    font-size: 16px;
-    font-weight: 300;
 }
 
-ul.other-skills-list li div:hover h4 {
+ul.other-skills-list li div:hover h6 {
     color: var(--color-secondary);
 }
 
@@ -43,13 +41,11 @@ div.other-skills-container {
     background-color: var(--color-not-so-dark);
 }
 
-div.other-skills-container h3 {
+div.other-skills-container h5 {
     margin-left: 36px;
     margin-top: 9px;
     margin-bottom: 9px;
     color: var(--color-semi-transparent-light);
-    font-size: 23px;
-    font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {

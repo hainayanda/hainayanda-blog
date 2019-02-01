@@ -43,21 +43,17 @@ div.footer-icon-container {
     color: var(--color-secondary)
 }
 
-h3.h3-footer{
-    font-size: 21px;
-    font-weight: 400;
+h6.footer{
     color: white;
 }
 
-p.p-footer{
+p.footer{
     font-size: 16px;
-    font-weight: 300;
     color: var(--color-semi-transparent-light);
 }
 
-h4.phone-number{
+h6.phone-number{
     font-size: 16px;
-    font-weight: 300;
     color: var(--color-semi-transparent-light);
     
 }

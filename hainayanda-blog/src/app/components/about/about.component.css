@@ -32,23 +32,10 @@ div.about-content-container{
     color: var(--color-darker)
 }
 
-h1.about-bold{
-    font-size: 63px;
-    line-height: 90%;
-    font-weight: 900
-}
-
-h2.about-semi-bold{
-    font-size: 45px;
-    line-height: 90%;
-    font-weight: 400;
-}
-
 p.about-p{
-    font-size: 20px;
-    font-weight: 400;
     padding: 45px 0 18px;
 }
+
 i.button-r-arrow{
     margin-left: 20px;
     font-size: 1.2em;

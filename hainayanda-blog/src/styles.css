@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -24,7 +24,67 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-p{
+.regular {
+  font-weight: 300;
+}
+
+.semi-bold {
+  line-height: 95%;
+  font-weight: 400;
+}
+
+.boldest {
+  line-height: 90%;
+  font-weight: 900
+}
+
+.bold {
+  line-height: 95%;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 63px;
+}
+
+h2 {
+  font-size: 54px;
+}
+
+h3 {
+  font-size: 45px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 27px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+h6.small {
+  font-size: 16px;
+}
+
+h6.smaller {
+  font-size: 14px;
+}
+
+p.big {
+  font-size: 20px;
+}
+
+p.huge {
+  font-size: 27px;
+}
+
+p {
+  font-size: 16px;
   margin: 0px;
 }
 
@@ -32,7 +92,7 @@ p{
   white-space: pre-line;
 }
 
-.separator{
+.separator {
   margin-left: 36px;
   margin-right: 36px;
   margin-top: 27px;

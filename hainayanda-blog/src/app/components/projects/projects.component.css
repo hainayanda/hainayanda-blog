@@ -64,20 +64,18 @@ div.project-tags ul li div.active {
     background-color: var(--color-primary);
 }
 
-div.project-tags ul li div h4 {
+div.project-tags ul li div h6 {
     align-content: center;
     color: var(--color-light);
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 14px;
-    font-weight: 300;
 }
 
-div.project-tags ul li div:hover h4 {
+div.project-tags ul li div:hover h6 {
     color: white;
 }
 
-div.project-tags ul li div.active h4 {
+div.project-tags ul li div.active h6 {
     color: white;
     font-weight: 700;
 }
@@ -97,31 +95,29 @@ div.project-container {
 }
 
 div.project {
+    max-width: 100%;
+    min-width: 90%;
     margin: 9px;
     background-color: var(--color-dark);
     padding: 18px;
     border-radius: 9px;
 }
 
-div.project h3 {
-    font-size: 20px;
-    font-weight: 400;
+div.project h5 {
     line-height: 90%;
     color: var(--color-light)
 }
 
-div.project h5 {
-    font-size: 16px;
-    font-weight: 300;
+div.project h6 {
     line-height: 90%;
     color: var(--color-semi-transparent-light)
 }
 
-div.project:hover h3 {
+div.project:hover h5 {
     color: white
 }
 
-div.project:hover h5 {
+div.project:hover h6 {
     color: white
 }
 

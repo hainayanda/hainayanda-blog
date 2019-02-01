@@ -6,9 +6,7 @@
     padding: 36px;
 }
 
-div.experiences-title{
-    font-size: 20px;
-    font-weight: 400;
+h6.experiences-title{
     color: var(--color-semi-transparent-light)
 }
 

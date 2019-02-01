@@ -1,6 +1,9 @@
 {
+  "engines": {
+    "node": "9.x"
+  },
   "name": "hainayanda-blog",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

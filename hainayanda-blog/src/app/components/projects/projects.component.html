@@ -1,5 +1,4 @@
 
-<app-project-modal [project]=selectedProject></app-project-modal>
 <div class="projects-container">
   <div class="projects-header">
     <h1 class="text-header">My Project</h1>
@@ -14,9 +13,9 @@
     <ul>
       <li *ngFor="let tag of tags">
         <div [id]="formatTagId(tag)" (click)="onTagClicked(tag)">
-          <h4>
+          <h6 class="regular smaller">
             {{tag}}
-          </h4>
+          </h6>
         </div>
       </li>
     </ul>
@@ -24,10 +23,10 @@
   <div class="separator"></div>
   <div class="projects">
     <div *ngFor="let project of projectWithAppliedTags" class="project-container">
-      <div class="project" (click)="onSelected(project)">
+      <div class="project" (click)="onSelected(project, content)">
         <img [src]="primaryPictureOf(project)" class="project-primary-photo">
-        <h3>{{project.name}}</h3>
-        <h5>{{formatDate(project.startedDate)}} - {{formatDate(project.endDate)}}</h5>
+        <h6 class="semi-bold">{{project.name}}</h6>
+        <h6 class="regular smaller">{{formatDate(project.startedDate)}} - {{formatDate(project.endDate)}}</h6>
       </div>
     </div>
   </div>
