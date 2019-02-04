@@ -23,6 +23,7 @@ export class NavComponent implements OnInit {
     $(() => {
       $(document).scroll(function () {
         var $nav = $(".navbar");
+        $("#js-menu").removeClass("active")
         $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
       });
     });

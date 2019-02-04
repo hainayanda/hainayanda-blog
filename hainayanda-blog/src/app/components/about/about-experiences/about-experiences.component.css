@@ -34,6 +34,11 @@ div.company-photo {
     margin: 27px;
 }
 
+div.company-photo img {
+    width: 90px;
+    height: 90px;
+}
+
 div.experience-description {
     padding-left: 18px;
 }
@@ -54,4 +59,17 @@ div.experience-description {
     font-size: 14px;
     font-weight: 300;
     color: var(--color-light)
+}
+
+@media screen and (max-width: 900px) {
+    div.company-photo {
+        width: 64px;
+        height: 64px;
+        margin: 18px;
+    }
+
+    div.company-photo img {
+        width: 64px;
+        height: 64px;
+    }
 }

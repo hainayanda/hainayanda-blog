@@ -28,5 +28,6 @@ div.dev-skills-container {
 @media screen and (max-width: 768px) {
   div.column {
     width: 50%;
+    min-height: 210px;
   }
 }

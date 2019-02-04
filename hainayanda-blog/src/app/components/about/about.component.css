@@ -50,7 +50,6 @@ a.button{
     border-radius: 9px;
     margin-right: 18px;
     margin-top: 18px;
-    margin-bottom: 27px;
     display: inline-block;
 }
 
@@ -64,6 +63,7 @@ a.button-project{
 
 a.button-contact{
     background-color: var(--color-dark);
+    margin-bottom: 27px;
 }
 
 @media screen and (max-width: 900px) {

@@ -50,16 +50,19 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
     if (appliedTags.length == 0) return this.projects
     let foundProjects: Project[] = []
     this.projects.forEach(project => {
-      let isFound: boolean = false
-      project.tags.forEach(tag => {
-        isFound = appliedTags.includes(tag)
+      let found: number = 0
+      appliedTags.forEach(tag => {
+        let tags = project.tags
+        if (tags != null) {
+          if (tags.includes(tag)) found++
+        }
       })
-      if (isFound) foundProjects.push(project)
+      if (found == appliedTags.length) foundProjects.push(project)
     })
     return foundProjects
   }
 
-  onSelected(project: Project, content){
+  onSelected(project: Project, content) {
     this.router.navigate(['project', project.id])
   }
 
