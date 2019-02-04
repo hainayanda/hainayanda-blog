@@ -1,3 +1,22 @@
-<p>
-  project-detail works!
-</p>
+<div class="carousel">
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let image of project.pictures">
+      <div [style.background-image]="'url('+ image +')'" class="project-images-carousel"></div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<div>
+    <h1>{{project.name}}</h1>
+    <h3>{{formatDate(project.startedDate)}} - {{formatDate(project.endDate)}}</h3>
+    <p>{{project.description}}</p>
+    <div>
+      <a *ngIf="project.link" class="button button-gotolink" [attr.href]="project.link" target="_blank">
+        Go To Project
+        <i class="button-r-arrow fas fa-caret-right"></i>
+      </a>
+      <a class="button button-back" routerLink="/projects">
+        Back To Project Page
+        <i class="button-r-arrow fas fa-caret-right"></i>
+      </a>
+    </div>
+  </div>

@@ -7,12 +7,15 @@
     font-weight: 700;
     background-color: var(--color-dark);
     padding-bottom: 10px;
-    transition: background-color 200ms linear;
+    min-height: 50px;
+    margin-bottom: 20px;
+    transition: background-color 500ms linear;
+    display: block;
 }
 
 .navbar.scrolled {
     background-color:var(--color-darker) !important;
-    transition: background-color 200ms linear;
+    transition: background-color 500ms linear;
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.18);
 }
 
@@ -53,26 +56,34 @@
 .logo {
     display: inline-block;
     font-size: 22px;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 18px;
 }
 
 .navbar-toggle {
     position: absolute;
-    right: 0px;
+    right: 18px;
+    float: right;
     cursor: pointer;
     color: var(--color-light-grey);
     font-size: 24px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 0px;
 }
 
 .navbar-toggle:hover {
     color: white
 }
 
-.active {
+.main-nav.active {
     display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
 
 @media screen and (min-width: 768px) {

@@ -109,7 +109,8 @@ div.project h5 {
 }
 
 div.project h6 {
-    line-height: 90%;
+    line-height: 100%;
+    margin-top: 9px;
     color: var(--color-semi-transparent-light)
 }
 
@@ -152,7 +153,7 @@ div.modal {
     }
     div.project {
         padding: 12px;
-        min-height: 222px;
+        min-height: 225px;
     }
     div.project-container {
         width: 50%;

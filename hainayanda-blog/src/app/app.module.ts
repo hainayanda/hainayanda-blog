@@ -13,7 +13,7 @@ import { AboutDevSkillsComponent } from './components/about/about-dev-skills/abo
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AboutOtherSkillsComponent } from './components/about/about-other-skills/about-other-skills.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component'
 import { HttpClientModule } from '@angular/common/http';
 
@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     HttpClientModule,
-    NgbModule,
+    NgbCarouselModule,
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({
