@@ -5,11 +5,11 @@ import { MainPage } from '../models/page';
 export const homeApi = express.Router();
 
 homeApi.get('/page', (req, resp) => {
-    PageDao.instance.getByUniqueFieldName('page', 'home', (err, pageRes) => {
-        if (pageRes == null) resp.status(500).send(err)
+    PageDao.instance.getOneByFilterQuery({'page': 'home'}, (err, pageRes) => {
+        if (pageRes == null) resp.status(500).send("Failed to get home page")
         else {
             let respJson = MainPage.parsedFrom(pageRes)
-            resp.send(respJson)
+            resp.json(respJson)
         }
     })
 })

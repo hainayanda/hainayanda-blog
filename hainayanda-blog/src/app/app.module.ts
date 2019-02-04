@@ -15,6 +15,7 @@ import { AboutOtherSkillsComponent } from './components/about/about-other-skills
 import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
     AboutExperiencesComponent, AboutSkillsComponent, AboutDevSkillsComponent, AboutOtherSkillsComponent, FooterComponent, ProjectDetailComponent
   ],
   imports: [
+    HttpClientModule,
     NgbModule,
     BrowserModule,
     AppRoutingModule,

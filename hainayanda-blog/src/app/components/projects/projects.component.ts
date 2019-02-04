@@ -28,22 +28,6 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
     return Array.from(tags)
   }
 
-  getProjectWithAppliedTags(): Project[] {
-    let appliedTags = this.appliedTags
-    if (appliedTags.length == 0) return this.projects
-    let foundProjects: Project[] = []
-    this.projects.forEach(project => {
-      let isFound: boolean = false
-      project.tags.forEach(tag => {
-        if (!isFound) {
-          isFound = appliedTags.includes(tag)
-          if (isFound) foundProjects.push(project)
-        }
-      })
-    })
-    return foundProjects
-  }
-
   constructor(
     private router: Router,
     @Inject('IProjectService') private projectService: IProjectService) {
@@ -59,6 +43,20 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
       this.projects = projects
       this.projectWithAppliedTags = this.getProjectWithAppliedTags()
     })
+  }
+
+  getProjectWithAppliedTags(): Project[] {
+    let appliedTags = this.appliedTags
+    if (appliedTags.length == 0) return this.projects
+    let foundProjects: Project[] = []
+    this.projects.forEach(project => {
+      let isFound: boolean = false
+      project.tags.forEach(tag => {
+        isFound = appliedTags.includes(tag)
+      })
+      if (isFound) foundProjects.push(project)
+    })
+    return foundProjects
   }
 
   onSelected(project: Project, content){

@@ -1,9 +1,10 @@
 import * as $ from 'jquery'
 
 export class BaseComponent {
-    formatDate(date: Date): string {
-        if (date == null) return "Present";
-        else {
+    formatDate(dateInNumber: number): string {
+        if (dateInNumber == null) return "Present";
+        else { 
+            let date = new Date(dateInNumber)
             var month: string = monthNames[date.getMonth()];
             var year: string = date.getFullYear().toString()
             return month + " " + year

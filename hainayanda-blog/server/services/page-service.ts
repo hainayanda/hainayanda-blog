@@ -8,14 +8,14 @@ import { ExternalLinks } from '../models/external.links';
 export const pageApi = express.Router();
 
 pageApi.get('/footer', (req, resp) => {
-    UserDao.instance.getByUniqueFieldName('name', 'Nayanda Haberty', (err, userRes) => {
-        if (userRes == null) resp.status(500).send(err)
+    UserDao.instance.getOneByFilterQuery({'name': 'Nayanda Haberty'}, (err, userRes) => {
+        if (userRes == null) resp.status(500).send("Failed to get user")
         else {
-            PageDao.instance.getByUniqueFieldName('page', 'home', (err, pageRes) => {
-                if (pageRes == null) resp.status(500).send(err)
+            PageDao.instance.getOneByFilterQuery({'page': 'footer'}, (err, pageRes) => {
+                if (pageRes == null) resp.status(500).send("Failed to get footer data")
                 else {
                     let respJson = FooterPage.parsedUsing(pageRes, userRes)
-                    resp.send(respJson)
+                    resp.json(respJson)
                 }
             })
         }
@@ -24,10 +24,10 @@ pageApi.get('/footer', (req, resp) => {
 
 pageApi.get('/extlinks', (req, resp) => {
     ExternalLinksDao.instance.getAll((err, extRes) => {
-        if(extRes == null) resp.status(500).send(err)
+        if(extRes == null) resp.status(500).send("Failed to get external links")
         else {
             let respJson = ExternalLinks.parsedFrom(extRes)
-            resp.send(respJson)
+            resp.json(respJson)
         }
     })
 })

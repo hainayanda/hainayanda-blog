@@ -9,10 +9,10 @@ import { projectApi } from './services/project-service'
 const app = express()
 const port = process.env.PORT || 3001
 
-app.use('/api/about', aboutApi);
-app.use('/api/home', homeApi);
-app.use('/api/page', pageApi);
-app.use('/api/project', projectApi);
+app.use('/api/v1/about', aboutApi);
+app.use('/api/v1/home', homeApi);
+app.use('/api/v1/page', pageApi);
+app.use('/api/v1/project', projectApi);
 
 app.use(express.static(Utils.outerDir() + '/dist/hainayanda-blog'));
 app.get(/^\/(?!api)/, (req,res) => res.sendFile(Utils.outerDir() + '/dist/hainayanda-blog/index.html'));

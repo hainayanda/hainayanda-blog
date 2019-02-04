@@ -3,8 +3,8 @@ export class Project {
     name: string
     pictures: string[]
     tags: ProjectTag[]
-    startedDate: Date
-    endDate: Date
+    startedDate: number
+    endDate: number
     description: string
     link: string
 }

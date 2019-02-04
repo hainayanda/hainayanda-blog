@@ -4,8 +4,8 @@ export class Experience {
     officeName?: string
     officeLogo?: string
     position?: string
-    startDate?: Date
-    endDate?: Date
+    startDate?: number
+    endDate?: number
     location?: string
     description?: string
 
@@ -14,8 +14,8 @@ export class Experience {
         parsed.officeName = experience.officeName
         parsed.officeLogo = experience.officeLogo
         parsed.position = experience.position
-        parsed.startDate = experience.startDate
-        parsed.endDate = experience.endDate
+        if(experience.startDate != null) parsed.startDate = experience.startDate.getTime()
+        if(experience.endDate != null) parsed.endDate = experience.endDate.getTime()
         parsed.location = experience.location
         parsed.description = experience.description
         return parsed

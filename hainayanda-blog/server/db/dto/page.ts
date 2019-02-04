@@ -1,6 +1,6 @@
 import { Dto } from "./dto";
 import { DbCollection } from "../connection";
-
+//error
 export class PageDao extends DbCollection<PageDto> {
 
     static instance = new PageDao()

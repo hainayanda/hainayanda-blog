@@ -5,8 +5,8 @@ export class Project {
     name?: string
     pictures?: string[]
     tags?: ProjectTag[]
-    startedDate?: Date
-    endDate?: Date
+    startedDate?: number
+    endDate?: number
     description?: string
     link?: string
 
@@ -16,8 +16,8 @@ export class Project {
         parsed.name = project.name
         parsed.pictures = project.pictures
         parsed.tags = this.parseTags(project.tags)
-        parsed.startedDate = project.startedDate
-        parsed.endDate = project.endDate
+        if(project.startedDate) parsed.startedDate = project.startedDate.getTime()
+        if(project.endDate) parsed.endDate = project.endDate.getTime()
         parsed.description = project.description
         parsed.link = project.link
         return parsed

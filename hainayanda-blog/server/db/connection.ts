@@ -1,7 +1,7 @@
-import { MongoClient, Db, Collection, MongoCallback, MongoError, ObjectId } from "mongodb";
+import { MongoClient, Db, Collection, MongoCallback, MongoError, ObjectId, FilterQuery } from "mongodb";
 import { Dto } from "./dto/dto";
 
-const url = "mongodb+srv://client:nQqWqTZEk9I8vNBs@hainayanda-blog-cluster-emnzb.gcp.mongodb.net/test?retryWrites=true"
+const url = "mongodb+srv://client:nQqWqTZEk9I8vNBs@hainayanda-blog-cluster-emnzb.gcp.mongodb.net/hainayanda?retryWrites=true"
 var client: MongoClient
 var connected: Boolean = false
 var dbName = "hainayanda"
@@ -15,11 +15,12 @@ MongoClient.connect(url, (err, c) => {
 export interface IDbCollection<T extends Dto> {
     getAll(callback: MongoCallback<T[]>): void
     getById(id: string, callback: MongoCallback<T|null>): void
-    getByUniqueFieldName<V>(fieldName: string, fieldValue: V, callback: MongoCallback<T|null>): void
+    getOneByFilterQuery(query: FilterQuery<T>, callback: MongoCallback<T|null>): void
+    getByFilterQuery(query: FilterQuery<T[]>, callback: MongoCallback<T[]>): void
 }
 
 export class DbCollection<T extends Dto> implements IDbCollection<T> {
-
+    
     private db?: Db
     private collection?: Collection<T>
 
@@ -63,12 +64,20 @@ export class DbCollection<T extends Dto> implements IDbCollection<T> {
         collection.findOne({'_id': new ObjectId(id)}, callback)
     }
 
-    getByUniqueFieldName<V>(fieldName: string, fieldValue: V, callback: MongoCallback<T | null>): void {
+    getOneByFilterQuery(query: FilterQuery<T>, callback: MongoCallback<T|null>): void {
         if(!this.tryToConnect()){
             callback(new MongoError("failed to connect"), null)
             return
         }
         let collection = this.getCollection()
-        collection.findOne({fieldName : fieldValue}, callback)
+        collection.findOne(query, callback)
+    }
+    getByFilterQuery(query: FilterQuery<T[]>, callback: MongoCallback<T[]>): void {
+        if(!this.tryToConnect()){
+            callback(new MongoError("failed to connect"), [])
+            return
+        }
+        let collection = this.getCollection()
+        collection.find(query).toArray(callback)
     }
 }
