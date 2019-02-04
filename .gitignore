@@ -64,6 +64,7 @@ typings/
 
 # compiled output
 /dist
+*/server/build
 /tmp
 /out-tsc
 

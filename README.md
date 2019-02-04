@@ -1,6 +1,23 @@
 # hainayanda-blog
 My Personal Blog
 
-## installation
+## angular
+### installation
+- navigate to hainayanda-blog
 - npm install
-- npm install -D @types/jquery
+### build
+- navigate to hainayanda-blog
+- ng build --prod
+
+## server
+### installation
+- navigate to hainayanda-blog/server
+- npm install
+
+### build
+- navigate to hainayanda-blog/server
+- npm run tsc
+
+## production run
+- navigate to hainayanda-blog
+- npm start

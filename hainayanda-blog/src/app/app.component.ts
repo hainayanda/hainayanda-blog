@@ -9,7 +9,14 @@ export class AppComponent {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.router.navigate(['home'])
+    let path = window.location.pathname
+    if(path == null || path == '') path = 'home'
+    this.router.navigate([path]).then(data => {
+      console.log('Route exists, redirection is done');
+    })
+    .catch(e => {
+      this.router.navigate(["home"])
+    })
   }
   
   getRouterOutletState(outlet) {
