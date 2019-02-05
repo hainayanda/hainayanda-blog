@@ -52,16 +52,19 @@ div.project-tags ul li div {
     margin-right: 18px;
     margin-top: 9px;
     margin-bottom: 9px;
-    background-color: var(--color-dark)
+    background-color: var(--color-dark);
+    transition: background-color 200ms linear;
 }
 
 div.project-tags ul li div:hover {
     background-color: var(--color-darker);
     box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.18);
+    transition: background-color 200ms linear;
 }
 
 div.project-tags ul li div.active {
     background-color: var(--color-primary);
+    transition: background-color 200ms linear;
 }
 
 div.project-tags ul li div h6 {
@@ -69,15 +72,18 @@ div.project-tags ul li div h6 {
     color: var(--color-light);
     margin-top: 5px;
     margin-bottom: 5px;
+    transition: color 200ms linear;
 }
 
 div.project-tags ul li div:hover h6 {
     color: white;
+    transition: color 200ms linear;
 }
 
 div.project-tags ul li div.active h6 {
     color: white;
     font-weight: 700;
+    transition: color 200ms linear;
 }
 
 div.projects {
@@ -101,30 +107,36 @@ div.project {
     background-color: var(--color-dark);
     padding: 18px;
     border-radius: 9px;
+    transition: background-color 200ms linear;
 }
 
 div.project h5 {
     line-height: 90%;
-    color: var(--color-light)
+    color: var(--color-light);
+    transition: color 200ms linear;
 }
 
 div.project h6 {
     line-height: 100%;
     margin-top: 9px;
-    color: var(--color-semi-transparent-light)
+    color: var(--color-semi-transparent-light);
+    transition: color 200ms linear;
 }
 
 div.project:hover h5 {
-    color: white
+    color: white;
+    transition: color 200ms linear;
 }
 
 div.project:hover h6 {
-    color: white
+    color: white;
+    transition: color 200ms linear;
 }
 
 div.project:hover {
     background-color: var(--color-darker);
     box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.18);
+    transition: background-color 200ms linear;
 }
 
 .project-primary-photo {

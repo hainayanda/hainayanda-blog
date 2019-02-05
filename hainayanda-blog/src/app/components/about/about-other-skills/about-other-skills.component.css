@@ -19,11 +19,13 @@ ul.other-skills-list li div {
     margin-right: 18px;
     margin-top: 9px;
     margin-bottom: 9px;
-    background-color: var(--color-dark)
+    background-color: var(--color-dark);
+    transition: background-color 200ms linear;
 }
 
 ul.other-skills-list li div:hover {
     background-color: var(--color-darker);
+    transition: background-color 200ms linear;
 }
 
 ul.other-skills-list li div h6 {
@@ -31,10 +33,12 @@ ul.other-skills-list li div h6 {
     color: var(--color-primary);
     margin-top: 9px;
     margin-bottom: 9px;
+    transition: color 200ms linear;
 }
 
 ul.other-skills-list li div:hover h6 {
     color: var(--color-secondary);
+    transition: color 200ms linear;
 }
 
 div.other-skills-container {

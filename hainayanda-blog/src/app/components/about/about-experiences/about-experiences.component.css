@@ -17,6 +17,7 @@ div.experiences-list{
 
 div.experience:hover {
     background-color: var(--color-darker);
+    transition: background-color 200ms linear;
 }
 
 div.experience {
@@ -26,6 +27,7 @@ div.experience {
     margin-top: 18px;
     background-color: var(--color-dark);
     border-radius: 18px;
+    transition: background-color 200ms linear;
 }
 
 div.company-photo {

@@ -5,18 +5,18 @@
     </ng-template>
   </ngb-carousel>
 </div>
-<div>
-    <h1>{{project.name}}</h1>
-    <h3>{{formatDate(project.startedDate)}} - {{formatDate(project.endDate)}}</h3>
-    <p>{{project.description}}</p>
-    <div>
-      <a *ngIf="project.link" class="button button-gotolink" [attr.href]="project.link" target="_blank">
-        Go To Project
-        <i class="button-r-arrow fas fa-caret-right"></i>
-      </a>
-      <a class="button button-back" routerLink="/projects">
-        Back To Project Page
-        <i class="button-r-arrow fas fa-caret-right"></i>
-      </a>
-    </div>
+<div class="project-description-container">
+  <h2 class="bold">{{project.name}}</h2>
+  <h5 class="semi-bold">{{formatDate(project.startedDate)}} - {{formatDate(project.endDate)}}</h5>
+  <p class="regular line-breaker">{{project.description}}</p>
+  <div class="button-container">
+    <a class="button button-back" routerLink="/projects">
+      <i class="button-r-arrow fas fa-caret-left"></i>
+      Back to project page
+    </a>
+    <a *ngIf="project.link" class="button button-gotolink" [attr.href]="project.link" target="_blank">
+      Go to project
+      <i class="button-r-arrow fas fa-caret-right"></i>
+    </a>
   </div>
+</div>
