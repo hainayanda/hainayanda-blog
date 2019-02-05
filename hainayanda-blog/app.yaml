@@ -9,10 +9,10 @@ resources:
   disk_size_gb: 10
 
 handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
 - url: /.*
-  static_files: dist/hainayanda-blog/index.html
-  upload: dist/hainayanda-blog/index.html
   secure: always
-- url: /.*
-  static_dir: dist/hainayanda-blog
-  secure: always
+  redirect_http_response_code: 301
+  script: auto
