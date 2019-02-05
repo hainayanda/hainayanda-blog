@@ -1,5 +1,6 @@
 import { MongoClient, Db, Collection, MongoCallback, MongoError, ObjectId, FilterQuery } from "mongodb";
 import { Dto } from "./dto/dto";
+import { CacheManager } from '../cache/cache-manager';
 
 const url = "mongodb+srv://client:nQqWqTZEk9I8vNBs@hainayanda-blog-cluster-emnzb.gcp.mongodb.net/hainayanda?retryWrites=true"
 var client: MongoClient
@@ -21,6 +22,7 @@ export interface IDbCollection<T extends Dto> {
 
 export class DbCollection<T extends Dto> implements IDbCollection<T> {
     
+    private cache: CacheManager<T> = new CacheManager(100)
     private db?: Db
     private collection?: Collection<T>
 
@@ -52,7 +54,10 @@ export class DbCollection<T extends Dto> implements IDbCollection<T> {
             return
         }
         let collection = this.getCollection()
-        collection.find({}).toArray(callback)
+        collection.find({}).toArray((err, res) => {
+            if(res != null) this.cache.putAll(res)
+            callback(err, res)
+        })
     }
 
     getById(id: string, callback: MongoCallback<T|null>) {
@@ -60,8 +65,17 @@ export class DbCollection<T extends Dto> implements IDbCollection<T> {
             callback(new MongoError("failed to connect"), null)
             return
         }
+        let objId = new ObjectId(id)
+        let fromCache = this.cache.get(objId)
+        if(fromCache != null && fromCache != undefined){
+            callback(new MongoError(''), fromCache)
+            return
+        }
         let collection = this.getCollection()
-        collection.findOne({'_id': new ObjectId(id)}, callback)
+        collection.findOne({'_id': new ObjectId(id)}, (err, res) => {
+            if(res != null) this.cache.put(res)
+            callback(err, res)
+        })
     }
 
     getOneByFilterQuery(query: FilterQuery<T>, callback: MongoCallback<T|null>): void {
@@ -70,7 +84,10 @@ export class DbCollection<T extends Dto> implements IDbCollection<T> {
             return
         }
         let collection = this.getCollection()
-        collection.findOne(query, callback)
+        collection.findOne(query, (err, res) => {
+            if(res != null) this.cache.put(res)
+            callback(err, res)
+        })
     }
     getByFilterQuery(query: FilterQuery<T[]>, callback: MongoCallback<T[]>): void {
         if(!this.tryToConnect()){
@@ -78,6 +95,9 @@ export class DbCollection<T extends Dto> implements IDbCollection<T> {
             return
         }
         let collection = this.getCollection()
-        collection.find(query).toArray(callback)
+        collection.find(query).toArray((err, res) => {
+            if(res != null) this.cache.putAll(res)
+            callback(err, res)
+        })
     }
 }

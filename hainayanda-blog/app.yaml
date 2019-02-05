@@ -9,8 +9,10 @@ resources:
   disk_size_gb: 10
 
 handlers:
-- url: /
+- url: /.*
   static_files: dist/hainayanda-blog/index.html
   upload: dist/hainayanda-blog/index.html
-- url: /
+  secure: always
+- url: /.*
   static_dir: dist/hainayanda-blog
+  secure: always
