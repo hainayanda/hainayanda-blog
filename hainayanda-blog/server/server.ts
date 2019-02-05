@@ -9,12 +9,6 @@ import { projectApi } from './services/project-service'
 const app = express()
 const port = process.env.PORT || 3001
 
-//comment this if on development
-app.use (function (req, res, next) {
-    if (req.secure)next();
-    else res.redirect('https://' + req.headers.host + req.url);
-});
-
 app.use('/api/v1/about', aboutApi);
 app.use('/api/v1/home', homeApi);
 app.use('/api/v1/page', pageApi);
