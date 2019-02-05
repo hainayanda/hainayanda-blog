@@ -10,7 +10,7 @@ export class AppComponent {
 
   ngOnInit() {
     let path = window.location.pathname
-    if(path == null || path == '') path = 'home'
+    if(path == null || path == '' || path == '/') path = 'home'
     this.router.navigate([path]).then(data => {
       console.log('Route exists, redirection is done');
     })
