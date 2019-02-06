@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FooterPage } from 'src/app/models/page';
-import { IPageService, PageService } from 'src/app/services/page.service';
-import { ExternalLinks } from 'src/app/models/external.links';
+import { FooterPage } from '../../models/page';
+import { IPageService, PageService } from '../../services/page.service';
+import { ExternalLinks } from '../../models/external.links';
 
 @Component({
   selector: 'app-footer',

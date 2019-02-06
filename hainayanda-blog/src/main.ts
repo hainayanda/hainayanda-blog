@@ -8,7 +8,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+document.addEventListener('DOMContentLoaded', () => {
+  platformBrowserDynamic().bootstrapModule(AppModule)
   .then(ref => {
     // Ensure Angular destroys itself on hot reloads.
     if (window['ngRef']) {
@@ -19,3 +20,4 @@ platformBrowserDynamic().bootstrapModule(AppModule)
     // Otherwise, log the boot error
   })
   .catch(err => console.error(err));
+});

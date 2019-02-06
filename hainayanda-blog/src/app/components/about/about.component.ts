@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { IAboutService, AboutService } from 'src/app/services/about.service';
-import { MainPage } from 'src/app/models/page';
-import { Skills } from 'src/app/models/skills';
+import { IAboutService, AboutService } from '../../services/about.service';
+import { MainPage } from '../../models/page';
+import { Skills } from '../../models/skills';
 import { PageComponent } from '../BaseComponent';
 
 @Component({

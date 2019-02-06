@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectService, IProjectService } from 'src/app/services/project.service';
-import { Project } from 'src/app/models/project';
+import { ProjectService, IProjectService } from '../../services/project.service';
+import { Project } from '../../models/project';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { BaseComponent } from '../BaseComponent';
 

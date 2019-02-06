@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
-import { IAboutService, AboutService } from 'src/app/services/about.service';
-import { Experience } from 'src/app/models/experience';
+import { IAboutService, AboutService } from '../../../services/about.service';
+import { Experience } from '../../../models/experience';
 import * as $ from 'jquery'
 import { BaseComponent } from '../../BaseComponent';
 

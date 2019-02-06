@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     HttpClientModule,
     NgbCarouselModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgCircleProgressModule.forRoot({
       radius: 100,

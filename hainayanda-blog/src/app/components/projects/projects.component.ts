@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, ViewChild, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
-import { ProjectService, IProjectService } from 'src/app/services/project.service';
-import { Project, ProjectTag } from 'src/app/models/project';
+import { ProjectService, IProjectService } from '../../services/project.service';
+import { Project, ProjectTag } from '../../models/project';
 import { BaseComponent } from '../BaseComponent';
 import { Router } from '@angular/router';
 

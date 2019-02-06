@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { ExternalLinks } from 'src/app/models/external.links';
-import { IPageService, PageService } from 'src/app/services/page.service';
+import { ExternalLinks } from '../../models/external.links';
+import { IPageService, PageService } from '../../services/page.service';
 import * as $ from 'jquery'
 
 @Component({
