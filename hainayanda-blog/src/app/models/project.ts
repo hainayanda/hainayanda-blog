@@ -7,6 +7,16 @@ export class Project {
     endDate: number
     description: string
     link: string
+
+    static get placeholder(): Project {
+        let project = new Project()
+        project.id = ''
+        project.name = 'The Project'
+        project.pictures = []
+        project.tags = []
+        project.description = ''
+        return project
+    }
 }
 
 export enum ProjectTag {

@@ -14,8 +14,8 @@ import { PageComponent } from '../BaseComponent';
 })
 export class AboutComponent extends PageComponent implements OnInit {
 
-  mainPage: MainPage;
-  skills: Skills
+  mainPage: MainPage = MainPage.placeholder;
+  skills: Skills = Skills.placeholder
 
   constructor(@Inject('IAboutService') private aboutService: IAboutService) {
     super()

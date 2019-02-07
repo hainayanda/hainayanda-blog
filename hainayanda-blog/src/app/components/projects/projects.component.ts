@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class ProjectsComponent extends BaseComponent implements OnInit {
 
-  projects: Project[]
+  projects: Project[] = []
   appliedTags: ProjectTag[] = []
   projectWithAppliedTags: Project[]
 

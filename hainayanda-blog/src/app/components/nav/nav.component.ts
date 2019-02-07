@@ -13,7 +13,7 @@ import * as $ from 'jquery'
 })
 export class NavComponent implements OnInit {
 
-  externalLinks: ExternalLinks
+  externalLinks: ExternalLinks = new ExternalLinks()
 
   constructor(@Inject('IPageService') private pageService: IPageService) { }
 

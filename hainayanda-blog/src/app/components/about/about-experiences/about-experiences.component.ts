@@ -14,7 +14,7 @@ import { BaseComponent } from '../../BaseComponent';
 })
 export class AboutExperiencesComponent extends BaseComponent implements OnInit {
 
-  experiences: Experience[]
+  experiences: Experience[] = []
 
   scrHeight: any;
   scrWidth: any;

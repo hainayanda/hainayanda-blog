@@ -12,7 +12,7 @@ import { HomeService, IHomeService } from '../../services/home.service';
 })
 export class HomeComponent extends PageComponent implements OnInit {
 
-  page: MainPage
+  page: MainPage = MainPage.placeholder
 
   constructor(@Inject('IHomeService') private homeService: IHomeService) {
     super()

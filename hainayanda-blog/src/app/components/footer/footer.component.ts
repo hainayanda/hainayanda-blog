@@ -13,8 +13,8 @@ import { ExternalLinks } from '../../models/external.links';
 })
 export class FooterComponent implements OnInit {
 
-  footer: FooterPage
-  externalLinks: ExternalLinks
+  footer: FooterPage = FooterPage.placeholder
+  externalLinks: ExternalLinks = new ExternalLinks()
 
   constructor(@Inject('IPageService') private pageService: IPageService) { }
 

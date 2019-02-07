@@ -8,7 +8,7 @@ import { Skill } from '../../../models/skills';
 })
 export class AboutDevSkillsComponent implements OnInit {
 
-  @Input() skills: Skill[]
+  @Input() skills: Skill[] = []
 
   constructor() { }
 

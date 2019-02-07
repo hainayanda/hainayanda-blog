@@ -1,5 +1,5 @@
 export class ExternalLinks {
-    github: string;
-    linkedin: string;
-    email: string;
+    github: string = '';
+    linkedin: string = '';
+    email: string = '';
 }
