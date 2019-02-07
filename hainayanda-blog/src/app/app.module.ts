@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutExperiencesComponent, AboutSkillsComponent, AboutDevSkillsComponent, AboutOtherSkillsComponent, FooterComponent, ProjectDetailComponent
   ],
   imports: [
+    TransferHttpCacheModule,
     HttpClientModule,
     NgbCarouselModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

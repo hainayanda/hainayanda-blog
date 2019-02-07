@@ -3,15 +3,16 @@ import { FooterPage } from '../models/page';
 import { Observable, of } from 'rxjs';
 import { ExternalLinks } from '../models/external.links';
 import { HttpClient } from '@angular/common/http';
+import { BaseService } from './base-service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PageService implements IPageService {
+export class PageService extends BaseService implements IPageService {
 
-  endPoint: string = 'api/v1/page'
+  endPoint: string = this.serviceUrl + '/page'
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { super() }
 
   getFooter(): Observable<FooterPage> {
     if(isDevMode()){

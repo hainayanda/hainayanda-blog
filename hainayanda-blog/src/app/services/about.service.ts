@@ -4,15 +4,16 @@ import { MainPage } from '../models/page';
 import { Observable, of } from 'rxjs';
 import { Experience } from '../models/experience';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { BaseService } from './base-service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AboutService implements IAboutService {
+export class AboutService extends BaseService implements IAboutService {
 
-  endPoint:string = 'api/v1/about'
+  endPoint:string = this.serviceUrl + '/about'
   
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { super() }
 
   getSkills(): Observable<Skills> {
     if(isDevMode()){

@@ -2,14 +2,15 @@ import { Injectable, isDevMode } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Project, ProjectTag } from '../models/project';
 import { HttpClient } from '@angular/common/http';
+import { BaseService } from './base-service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectService implements IProjectService {
+export class ProjectService extends BaseService implements IProjectService {
 
-  endPoint: string = 'api/v1/project'
-  constructor(private httpClient: HttpClient) { }
+  endPoint: string = this.serviceUrl + '/project'
+  constructor(private httpClient: HttpClient) { super() }
 
   getProjects(): Observable<Project[]> {
     if(isDevMode()){

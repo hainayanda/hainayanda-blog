@@ -2,15 +2,16 @@ import { Injectable, isDevMode } from '@angular/core';
 import { MainPage } from '../models/page';
 import { Observable, of, Scheduler } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { BaseService } from './base-service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService implements IHomeService {
+export class HomeService extends BaseService implements IHomeService {
 
-  endPoint: string = 'api/v1/home'
+  endPoint: string = this.serviceUrl + '/home'
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { super() }
 
   getHomePage(): Observable<MainPage> {
     if(isDevMode()){
