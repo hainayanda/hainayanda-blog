@@ -3,10 +3,6 @@ import { MainPage } from '../models/page';
 import { Observable, of, Scheduler } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { BaseService } from './base-service';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/operator/retry';
 
 @Injectable({
   providedIn: 'root'
