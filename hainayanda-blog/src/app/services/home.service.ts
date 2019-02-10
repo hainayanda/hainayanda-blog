@@ -3,6 +3,10 @@ import { MainPage } from '../models/page';
 import { Observable, of, Scheduler } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { BaseService } from './base-service';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/empty';
+import 'rxjs/add/operator/retry';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +29,7 @@ export interface IHomeService {
   getHomePage(): Observable<MainPage>
 }
 
-const MOCK_HOME: MainPage = {
+export const MOCK_HOME: MainPage = {
   title: "Hi!\nI'm Nayanda\n",
   subtitle: "Programmer",
   paragraph: "Not just one kind of programmer. Most experienced with mobile apps development, but can do web development, back-end development, desktop application or even hardware programming."

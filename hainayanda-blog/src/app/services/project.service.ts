@@ -34,7 +34,7 @@ export interface IProjectService {
   getProjectBy(id: string): Observable<Project>
 }
 
-const MOCK_PROJECTS: Project[] = [
+export const MOCK_PROJECTS: Project[] = [
   {
     id: "1",
     name: "Hai Nayanda Web",

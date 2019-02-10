@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, ViewChild, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
-import { ProjectService, IProjectService } from '../../services/project.service';
+import { ProjectService, IProjectService, MOCK_PROJECTS } from '../../services/project.service';
 import { Project, ProjectTag } from '../../models/project';
 import { BaseComponent } from '../BaseComponent';
 import { Router } from '@angular/router';
@@ -41,6 +41,9 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
   getProjects() {
     this.projectService.getProjects().subscribe(projects => {
       this.projects = projects
+      this.projectWithAppliedTags = this.getProjectWithAppliedTags()
+    }, _ => {
+      this.projects = MOCK_PROJECTS
       this.projectWithAppliedTags = this.getProjectWithAppliedTags()
     })
   }

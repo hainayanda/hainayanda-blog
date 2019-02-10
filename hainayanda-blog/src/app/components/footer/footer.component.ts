@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FooterPage } from '../../models/page';
-import { IPageService, PageService } from '../../services/page.service';
+import { IPageService, PageService, MOCK_FOOTER, MOCK_EXTERNAL_LINKS } from '../../services/page.service';
 import { ExternalLinks } from '../../models/external.links';
 
 @Component({
@@ -23,8 +23,10 @@ export class FooterComponent implements OnInit {
   }
 
   getPage() {
-    this.pageService.getFooter().subscribe(footer => this.footer = footer)
-    this.pageService.getExternalLinks().subscribe(externalLinks => this.externalLinks = externalLinks)
+    this.pageService.getFooter().subscribe(footer => this.footer = footer, 
+      _ => this.footer = MOCK_FOOTER)
+    this.pageService.getExternalLinks().subscribe(externalLinks => this.externalLinks = externalLinks, 
+      _ => this.externalLinks = MOCK_EXTERNAL_LINKS)
   }
 
 }

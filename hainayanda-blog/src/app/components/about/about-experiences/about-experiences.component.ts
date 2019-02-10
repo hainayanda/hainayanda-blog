@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
-import { IAboutService, AboutService } from '../../../services/about.service';
+import { IAboutService, AboutService, MOCK_EXPERIENCE } from '../../../services/about.service';
 import { Experience } from '../../../models/experience';
 import * as $ from 'jquery'
 import { BaseComponent } from '../../BaseComponent';
@@ -52,7 +52,8 @@ export class AboutExperiencesComponent extends BaseComponent implements OnInit {
   }
 
   getExperiences() {
-    this.aboutService.getExperiences().subscribe((experiences) => this.experiences = experiences)
+    this.aboutService.getExperiences().subscribe((experiences) => this.experiences = experiences,
+    _ => this.experiences = MOCK_EXPERIENCE)
   }
 
 }

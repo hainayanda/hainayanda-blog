@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ExternalLinks } from '../../models/external.links';
-import { IPageService, PageService } from '../../services/page.service';
+import { IPageService, PageService, MOCK_EXTERNAL_LINKS } from '../../services/page.service';
 import * as $ from 'jquery'
 
 @Component({
@@ -34,7 +34,8 @@ export class NavComponent implements OnInit {
   }
 
   getExternalLinks() {
-    this.pageService.getExternalLinks().subscribe(externalLinks => this.externalLinks = externalLinks)
+    this.pageService.getExternalLinks().subscribe(externalLinks => this.externalLinks = externalLinks, 
+      _ => this.externalLinks = MOCK_EXTERNAL_LINKS)
   }
 
 }

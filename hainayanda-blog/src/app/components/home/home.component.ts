@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MainPage } from '../../models/page';
 import { PageComponent } from '../BaseComponent';
-import { HomeService, IHomeService } from '../../services/home.service';
+import { HomeService, IHomeService, MOCK_HOME } from '../../services/home.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -23,7 +23,8 @@ export class HomeComponent extends PageComponent implements OnInit {
   }
 
   getPage() {
-    this.homeService.getHomePage().subscribe(page => this.page = page)
+    this.homeService.getHomePage().subscribe(page => this.page = page, 
+      _ => this.page = MOCK_HOME)
   }
 
 }
