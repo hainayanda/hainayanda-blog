@@ -57,9 +57,9 @@ export const MOCK_SKILLS: Skills = {
     + "On app development, I prefer the native approach, since the native generally have better performance than its hybrid alternative. I usually using Kotlin for Android and Swift for iOS as this languages are offer more modern approach for developing instead of Java or Objective-C. \n\n"
     + "For web development, since I usually using Angular 2 or above, TypeScript is my first option for my front end language. The back-end can adjusted according to the requirement.",
   skills: [
-    { name: "C# & Java", value: 0.9 },
+    { name: "C# & Java", value: 0.85 },
     { name: "Kotlin", value: 0.8 },
-    { name: "Swift", value: 0.85 },
+    { name: "Swift", value: 0.9 },
     { name: "JavaScript & TypeScript", value: 0.75 },
     { name: "C/C++", value: 0.7 }
   ],
@@ -75,13 +75,22 @@ export const MOCK_SKILLS: Skills = {
 
 export const MOCK_EXPERIENCE: Experience[] = [
   {
+    officeName: "Home Credit Indonesia",
+    officeLogo: "https://res.cloudinary.com/hainayanda/image/upload/v1587139341/PuRhYeyB_400x400.png",
+    position: "Senior iOS Developer",
+    startDate: new Date(2019, 9).getTime(),
+    endDate: null,
+    location: "South Jakarta, Greater Jakarta, Indonesia",
+    description: "Developing and maintain Home Credit iOS Application"
+  },
+  {
     officeName: "Bukalapak",
     officeLogo: "https://res.cloudinary.com/hainayanda/image/upload/v1547886175/BukalapakLogo.png",
     position: "iOS Developer",
     startDate: new Date(2018, 10).getTime(),
-    endDate: null,
+    endDate: new Date(2019, 9).getTime(),
     location: "South Jakarta, Greater Jakarta, Indonesia",
-    description: "Developing and maintain Bukalapak iOS Application"
+    description: "Developing and maintain Bukalapak iOS Application, especially in search features"
   },
   {
     officeName: "Kencana Graha Global",

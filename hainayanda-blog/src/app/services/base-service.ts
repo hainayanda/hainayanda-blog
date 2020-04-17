@@ -1,3 +1,3 @@
 export class BaseService {
-    protected serviceUrl: string = "https://hainayanda.com/api/v1"
+    protected serviceUrl: string = "https://nayandah.com/api/v1"
 }
