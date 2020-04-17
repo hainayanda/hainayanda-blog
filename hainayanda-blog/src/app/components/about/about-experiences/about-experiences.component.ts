@@ -52,7 +52,12 @@ export class AboutExperiencesComponent extends BaseComponent implements OnInit {
   }
 
   getExperiences() {
-    this.aboutService.getExperiences().subscribe((experiences) => this.experiences = experiences,
+    this.aboutService.getExperiences().subscribe((experiences) => {
+      experiences.sort((a, b) => {
+        return a.startDate - b.startDate
+      })
+      this.experiences = experiences
+    },
     _ => this.experiences = MOCK_EXPERIENCE)
   }
 

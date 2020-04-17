@@ -95,9 +95,11 @@ div.projects {
 }
 
 div.project-container {
-    display: flex;
+    display: table-cell;
     float: left;
-    width: 20%;
+    width: 16.66%;
+    height: auto;
+    padding: 0px;
 }
 
 div.project {
@@ -169,5 +171,8 @@ div.modal {
     }
     div.project-container {
         width: 50%;
+    }
+    div.projects {
+        padding: 27px;
     }
 }
