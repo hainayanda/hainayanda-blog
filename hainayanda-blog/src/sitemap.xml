@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>
-			https://hainayanda.com
+			https://nayandah.com
 		</loc>
 		<priority>
 			1.0
@@ -10,31 +10,23 @@
 	</url>
 	<url>
 		<loc>
-			https://hainayanda.com/about
+			https://nayandah.com/about
 		</loc>
 		<priority>
-			0.8
+			1.0
 		</priority>
 	</url>
 	<url>
 		<loc>
-			https://hainayanda.com/projects
+			https://nayandah.com/projects
 		</loc>
 		<priority>
-			0.8
+			1.0
 		</priority>
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57db813e08da30704e477f
-		</loc>
-		<priority>
-			0.5
-		</priority>
-	</url>
-    <url>
-		<loc>
-			https://hainayanda.com/project/5c57dd90008d5c3070c9e9a0
+			https://nayandah.com/project/5c57db813e08da30704e477f
 		</loc>
 		<priority>
 			0.5
@@ -42,7 +34,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57ddde008d5c3070c9e9a1
+			https://nayandah.com/project/5c57dd90008d5c3070c9e9a0
 		</loc>
 		<priority>
 			0.5
@@ -50,7 +42,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57de38008d5c3070c9e9a2
+			https://nayandah.com/project/5c57ddde008d5c3070c9e9a1
 		</loc>
 		<priority>
 			0.5
@@ -58,7 +50,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57de78008d5c3070c9e9a3
+			https://nayandah.com/project/5c57de38008d5c3070c9e9a2
 		</loc>
 		<priority>
 			0.5
@@ -66,7 +58,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57dec5008d5c3070c9e9a4
+			https://nayandah.com/project/5c57de78008d5c3070c9e9a3
 		</loc>
 		<priority>
 			0.5
@@ -74,7 +66,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57df30008d5c3070c9e9a5
+			https://nayandah.com/project/5c57dec5008d5c3070c9e9a4
 		</loc>
 		<priority>
 			0.5
@@ -82,7 +74,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57e006008d5c3070c9e9a6
+			https://nayandah.com/project/5c57df30008d5c3070c9e9a5
 		</loc>
 		<priority>
 			0.5
@@ -90,7 +82,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57e04b008d5c3070c9e9a7
+			https://nayandah.com/project/5c57e006008d5c3070c9e9a6
 		</loc>
 		<priority>
 			0.5
@@ -98,7 +90,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57e099008d5c3070c9e9a8
+			https://nayandah.com/project/5c57e04b008d5c3070c9e9a7
 		</loc>
 		<priority>
 			0.5
@@ -106,7 +98,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57e147008d5c3070c9e9a9
+			https://nayandah.com/project/5c57e099008d5c3070c9e9a8
 		</loc>
 		<priority>
 			0.5
@@ -114,7 +106,7 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57e1bd008d5c3070c9e9aa
+			https://nayandah.com/project/5c57e147008d5c3070c9e9a9
 		</loc>
 		<priority>
 			0.5
@@ -122,7 +114,15 @@
 	</url>
     <url>
 		<loc>
-			https://hainayanda.com/project/5c57e21d008d5c3070c9e9ab
+			https://nayandah.com/project/5c57e1bd008d5c3070c9e9aa
+		</loc>
+		<priority>
+			0.5
+		</priority>
+	</url>
+    <url>
+		<loc>
+			https://nayandah.com/project/5c57e21d008d5c3070c9e9ab
 		</loc>
 		<priority>
 			0.5

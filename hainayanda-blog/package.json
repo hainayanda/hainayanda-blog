@@ -3,7 +3,7 @@
     "node": "10.x.x"
   },
   "name": "hainayanda-blog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "node dist/server.js",
