@@ -17,7 +17,7 @@ export interface IDbCollection<T extends Dto> {
     getAll(callback: MongoCallback<T[]>): void
     getById(id: string, callback: MongoCallback<T|null>): void
     getOneByFilterQuery(query: FilterQuery<T>, callback: MongoCallback<T|null>): void
-    getByFilterQuery(query: FilterQuery<T[]>, callback: MongoCallback<T[]>): void
+    getByFilterQuery(query: FilterQuery<T>, callback: MongoCallback<T[]>): void
 }
 
 export class DbCollection<T extends Dto> implements IDbCollection<T> {
@@ -72,7 +72,7 @@ export class DbCollection<T extends Dto> implements IDbCollection<T> {
             return
         }
         let collection = this.getCollection()
-        collection.findOne({'_id': new ObjectId(id)}, (err, res) => {
+        collection.findOne({'_id': objId} as FilterQuery<T>, (err, res) => {
             if(res != null) this.cache.put(res)
             callback(err, res)
         })
@@ -89,7 +89,7 @@ export class DbCollection<T extends Dto> implements IDbCollection<T> {
             callback(err, res)
         })
     }
-    getByFilterQuery(query: FilterQuery<T[]>, callback: MongoCallback<T[]>): void {
+    getByFilterQuery(query: FilterQuery<T>, callback: MongoCallback<T[]>): void {
         if(!this.tryToConnect()){
             callback(new MongoError("failed to connect"), [])
             return

@@ -151,5 +151,8 @@
       }
     }
   },
-  "defaultProject": "hainayanda-blog"
+  "defaultProject": "hainayanda-blog",
+  "cli": {
+    "analytics": "b1baa975-7642-4fd7-8636-670d409c430d"
+  }
 }
