@@ -40,7 +40,7 @@ export class ProjectsComponent extends BaseComponent implements OnInit {
 
   getProjects() {
     this.projectService.getProjects().subscribe(projects => {
-      this.projects = projects
+      this.projects = projects.sort((a, b) => b.startedDate - a.startedDate)
       this.projectWithAppliedTags = this.getProjectWithAppliedTags()
     }, _ => {
       this.projects = MOCK_PROJECTS
