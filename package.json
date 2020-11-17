@@ -6,7 +6,7 @@
   "version": "0.0.3",
   "scripts": {
     "ng": "ng",
-    "start": "node dist/server.js",
+    "start": "ng build && node dist/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
