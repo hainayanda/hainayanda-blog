@@ -19,18 +19,18 @@ export class AboutComponent extends PageComponent implements OnInit {
   skills: Skills = Skills.placeholder;
 
   constructor(@Inject('IAboutService') private aboutService: IAboutService) {
-    super()
+    super();
   }
 
   ngOnInit() {
-    this.getPage()
+    this.getPage();
   }
 
   getPage() {
-    this.aboutService.getAboutPage().subscribe(page => this.mainPage = page, 
-      _ => this.mainPage = MOCK_ABOUT)
-    this.aboutService.getSkills().subscribe(skills => this.skills = skills, 
-      _ => this.skills = MOCK_SKILLS)
+    this.aboutService.getAboutPage().subscribe(page => this.mainPage = page,
+      _ => this.mainPage = MOCK_ABOUT);
+    this.aboutService.getSkills().subscribe(skills => this.skills = skills,
+      _ => this.skills = MOCK_SKILLS);
   }
 
 }
