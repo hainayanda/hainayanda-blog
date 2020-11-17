@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-primary: #d32f2f;
+  --color-secondary: #ff6659;
+  --color-primary-dark: #9a0007;
+  --color-lighter: rgba(255, 255, 255, 0.9);
+  --color-light: rgba(255, 255, 255, 0.8);
+  --color-semi-transparent-light: rgba(255, 255, 255, 0.4);
+  --color-transparent-light: rgba(255, 255, 255, 0.2);
+  --color-light-grey: #aaaaaa;
+  --color-dark: rgba(22, 22, 22, 0.54);
+  --color-darker: #161616;
+  --color-not-so-dark: #242424;
+}
+
+body {
+  background-color: var(--color-dark);
+  padding: 0;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.regular {
+  font-weight: 300;
+}
+
+.semi-bold {
+  line-height: 100%;
+  font-weight: 400;
+}
+
+.bold {
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.boldest {
+  line-height: 95%;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 54px;
+}
+
+h3 {
+  font-size: 45px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 27px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+h6.small {
+  font-size: 16px;
+}
+
+h6.smaller {
+  font-size: 14px;
+}
+
+p.big {
+  font-size: 20px;
+}
+
+p.huge {
+  font-size: 27px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.line-breaker {
+  white-space: pre-line;
+}
+
+.separator {
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: 27px;
+  -webkit-margin-before: 27px;
+          margin-block-start: 27px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: var(--color-transparent-light)
+}
+
+.separator-thin {
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: 27px;
+  -webkit-margin-before: 27px;
+          margin-block-start: 27px;
+  height: 1px;
+  border-radius: 0.5px;
+  background-color: var(--color-transparent-light)
+}
+
+/*# sourceMappingURL=styles.css.map*/
